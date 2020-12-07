@@ -3,9 +3,12 @@
 dem Projekt wird demnächst alles nötige an Information hinzugefügt, bis dahin verweisen wir auf ein [Fork](https://github.com/KurfuerstPilz/Softwareprojekt) des Vorgängerprojektes.
 
 ### Used Hardware and Software, useful Documents
+#### Soft- & Hardware
 - NUCLEO Board L552ZE-Q
 - STM32CubeIDE and STM32CubeProgrammer
 - ST-Link Driver
+#### Documents Links etc.
+- [freeRTOS on M33](https://www.freertos.org/2020/04/using-freertos-on-armv8-m-microcontrollers.html)
 
 ### Getting started Guide
 

@@ -1,7 +1,7 @@
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * @file    FreeRTOS/FreeRTOS_SecureIOToggle_TrustZone/NonSecure/Src/main.c
+  * @file    FreeRTOS/Demonstrator/NonSecure/Src/main.c
   * @author  MCD Application Team
   * @brief   Main program body (non-secure)
   ******************************************************************************

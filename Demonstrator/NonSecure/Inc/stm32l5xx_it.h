@@ -1,7 +1,7 @@
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * @file    FreeRTOS/FreeRTOS_SecureIOToggle_TrustZone/NonSecure/Inc/stm32l5xx_it.h
+  * @file    FreeRTOS/Demonstrator/NonSecure/Inc/stm32l5xx_it.h
   * @author  MCD Application Team
   * @brief   This file contains the headers of the interrupt handlers.
   ******************************************************************************

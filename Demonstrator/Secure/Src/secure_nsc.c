@@ -26,7 +26,7 @@
   * @{
   */
 
-/** @addtogroup FreeRTOS_SecureIOToggle_TrustZone
+/** @addtogroup Demonstrator
   * @{
   */
 

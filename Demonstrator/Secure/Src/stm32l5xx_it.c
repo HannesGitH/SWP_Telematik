@@ -1,7 +1,7 @@
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * @file    FreeRTOS/FreeRTOS_SecureIOToggle_TrustZone/Secure/Src/stm32l5xx_it.c
+  * @file    FreeRTOS/Demonstrator/Secure/Src/stm32l5xx_it.c
   * @author  MCD Application Team
   * @brief   Main Interrupt Service Routines in secure.
   *          This file provides template for all exceptions handler and

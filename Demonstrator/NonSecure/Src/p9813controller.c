@@ -1,6 +1,6 @@
-/*#include "p9813controller.h"
+#include "p9813controller.h"
 #include "constant.h"
-#include "stm32l5xx_hal_def.h"
+#include "stm32l5xx_nucleo.h"
 #include "cmsis_os.h"
 
 uint8_t _r;
@@ -8,8 +8,8 @@ uint8_t _g;
 uint8_t _b;
 
 GPIO_TypeDef *_GPIOx;
-GPIO_Pin_data _dataPIN;
-GPIO_Pin_data _clockPIN;
+uint16_t _dataPIN;
+uint16_t _clockPIN;
 
 uint32_t _bgr;
 uint32_t _sequence;
@@ -68,4 +68,4 @@ int LEDController__setRGB(
 	_r=r;_g=g;_b=b;
 	_LEDController__writeColor();
 	return SUCCESS;
-}*/
+}

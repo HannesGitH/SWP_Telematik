@@ -1,6 +1,8 @@
 #ifndef P9813CONTROLLER_H
 #define P9813CONTROLLER_H
 
+#include "stm32l5xx_nucleo.h"
+
     /**
       * @brief  create LED Strip Controller
       * @note   ----
@@ -24,6 +26,5 @@
       uint8_t g,
       uint8_t b
     );
-};
 
 #endif

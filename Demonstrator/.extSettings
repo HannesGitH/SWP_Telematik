@@ -5,5 +5,5 @@ Define=
 HALModule=TIM;EXTI;UART
 [Groups]
 Doc=../readme.txt;
-Drivers/BSP/STM32L5xx_Nucleo=../../Dependencies/Drivers/BSP/stm32l5xx_nucleo.c;
+Drivers/BSP=../../Dependencies/Drivers/BSP/stm32l5xx_nucleo.c;
 Drivers/HAL=../../Dependencies/Drivers/HAL/Src/stm32l5xx_hal_exti.c;../../Dependencies/Drivers/HAL/Src/stm32l5xx_hal_uart.c;../../Dependencies/Drivers/HAL/Src/stm32l5xx_hal_uart_ex.c;

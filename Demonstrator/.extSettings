@@ -1,5 +1,5 @@
 [ProjectFiles]
-HeaderPath=..\..\Dependencies\Drivers\BSP\STM32L5xx_Nucleo;
+HeaderPath=..\..\Dependencies\Drivers\BSP;
 [Others]
 Define=
 HALModule=TIM;EXTI;UART

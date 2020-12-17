@@ -23,7 +23,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-#include "p9813controller.h"
+//#include "p9813controller.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -273,13 +273,13 @@ void LEDStripper(void *argument)
 {
   /* USER CODE BEGIN LEDStripper */
   /* Infinite loop */
-	LEDController__initialize(GPIOD,7,6);
+	//LEDController__initialize(GPIOD,7,6);
   for(;;)
   {
 	  osDelay(500);
-	  LEDController__setRGB(0,0,0);
+	  //LEDController__setRGB(0,0,0);
 	  osDelay(500);
-	  LEDController__setRGB(255,255,255);
+	  //LEDController__setRGB(255,255,255);
   }
   /* USER CODE END LEDStripper */
 }

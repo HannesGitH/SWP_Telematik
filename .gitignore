@@ -1,4 +1,7 @@
+# build and compiled files
 **.o
 **.d
 **.su
 **makefile
+**.mk
+**.list

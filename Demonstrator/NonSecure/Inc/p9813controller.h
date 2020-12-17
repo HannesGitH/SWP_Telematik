@@ -1,24 +1,6 @@
 #ifndef P9813CONTROLLER_H
 #define P9813CONTROLLER_H
 
-
-class LEDController{
-  private:
-    uint8_t r;
-    uint8_t g;
-    uint8_t b;
-
-    GPIO_TypeDef *GPIOx;
-    GPIO_Pin_data dataPIN;
-    GPIO_Pin_data clockPIN;
-
-    uint32_t bgr;
-    uint32_t sequence;
-
-    void send32bitSequence(uint32_t sequence);
-    void writeColor();
-
-  public:
     /**
       * @brief  create LED Strip Controller
       * @note   ----
@@ -27,8 +9,7 @@ class LEDController{
       * @param  GPIO_Pin_clock specifies the pin to the p9813 clock line
       * @retval LEDController
       */
-    LEDController(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin_data, uint16_t GPIO_Pin_clock);
-    ~LEDController(){}
+    void LEDController__initialize(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin_data, uint16_t GPIO_Pin_clock);
 
     /**
       * @brief  Set an RGB color value to the RGB-Strip
@@ -38,7 +19,7 @@ class LEDController{
       * @param  b colorvalue BLUE
       * @retval success or not
       */
-    bool setRGB(
+    int LEDController__setRGB(
       uint8_t r,
       uint8_t g,
       uint8_t b

@@ -23,6 +23,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+#include "p9813controller.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -267,7 +268,6 @@ void LED_Thread(void *argument)
 * @param argument: Not used
 * @retval None
 */
-#include <p9813controller.h>
 /* USER CODE END Header_LEDStripper */
 void LEDStripper(void *argument)
 {

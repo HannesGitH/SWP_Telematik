@@ -188,7 +188,7 @@
 		<link>
 			<name>Drivers/BSP/stm32l5xx_nucleo.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-3-PROJECT_LOC%7D/Drivers/BSP/stm32l5xx_nucleo.c</locationURI>
+			<locationURI>$%7BPARENT-3-PROJECT_LOC%7D/Dependencies/Drivers/BSP/stm32l5xx_nucleo.c</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -131,9 +131,9 @@
 			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/Drivers/HAL/Src/stm32l5xx_hal_uart_ex.c</locationURI>
 		</link>
 		<link>
-			<name>Drivers/BSP/STM32L5xx_Nucleo/stm32l5xx_nucleo.c</name>
+			<name>Drivers/BSP/stm32l5xx_nucleo.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-6-PROJECT_LOC%7D/Drivers/BSP/STM32L5xx_Nucleo/stm32l5xx_nucleo.c</locationURI>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/Drivers/BSP/stm32l5xx_nucleo.c</locationURI>
 		</link>
 	</linkedResources>
 	<filteredResources>

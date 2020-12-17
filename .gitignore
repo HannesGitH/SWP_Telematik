@@ -5,3 +5,7 @@
 **makefile
 **.mk
 **.list
+
+# preferences
+
+**/.settings/**

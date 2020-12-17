@@ -16,7 +16,7 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>Demonstrator.ioc</name>
+			<name>IOT-Demonstrator.ioc</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/demonstrator.ioc</locationURI>
 		</link>
@@ -24,6 +24,11 @@
 			<name>Doc/readme.md</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/readme.md</locationURI>
+		</link>
+		<link>
+			<name>Drivers/BSP/stm32l5xx_nucleo.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/Drivers/BSP/stm32l5xx_nucleo.c</locationURI>
 		</link>
 		<link>
 			<name>Drivers/HAL/stm32l5xx_hal.c</name>
@@ -129,11 +134,6 @@
 			<name>Drivers/HAL/stm32l5xx_hal_uart_ex.c</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/Drivers/HAL/Src/stm32l5xx_hal_uart_ex.c</locationURI>
-		</link>
-		<link>
-			<name>Drivers/BSP/stm32l5xx_nucleo.c</name>
-			<type>1</type>
-			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/Drivers/BSP/stm32l5xx_nucleo.c</locationURI>
 		</link>
 	</linkedResources>
 	<filteredResources>

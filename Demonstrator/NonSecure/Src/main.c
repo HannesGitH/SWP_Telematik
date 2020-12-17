@@ -273,13 +273,13 @@ void LEDStripper(void *argument)
 {
   /* USER CODE BEGIN LEDStripper */
   /* Infinite loop */
-	LEDController lc = LEDController(GPIOD,7,6);
+	LEDController__initialize(GPIOD,7,6);
   for(;;)
   {
 	  osDelay(500);
-	  lc.setRGB(0,0,0);
+	  LEDController__setRGB(0,0,0);
 	  osDelay(500);
-	  lc.setRGB(255,255,255);
+	  LEDController__setRGB(255,255,255);
   }
   /* USER CODE END LEDStripper */
 }

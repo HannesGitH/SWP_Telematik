@@ -1,11 +1,11 @@
 #include "p9813controller.h"
 #include "constant.h"
-#include "stm32l5xx_nucleo.h"
-#include "cmsis_os.h"
 
 uint8_t _r;
 uint8_t _g;
 uint8_t _b;
+
+uint8_t _isAlreadyInitialized = 0;
 
 GPIO_TypeDef *_GPIOx;
 uint16_t _dataPIN;
@@ -45,6 +45,9 @@ void _LEDController__writeColor(){
 }
 
 void LEDController__initialize(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin_data, uint16_t GPIO_Pin_clock){
+	//if(_isAlreadyInitialized)return; //the one and only!
+	_isAlreadyInitialized=1;
+
 	_dataPIN=GPIO_Pin_data;_clockPIN=GPIO_Pin_clock;_GPIOx=GPIOx;
 
 

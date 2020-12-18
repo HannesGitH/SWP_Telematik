@@ -22,6 +22,8 @@
 #include "secure_nsc.h"
 #include <stdio.h>
 #include "secure_port_macros.h"  
+#include "p9813controller.h"
+
 /** @addtogroup STM32L5xx_HAL_Examples
   * @{
   */
@@ -73,6 +75,28 @@ CMSE_NS_ENTRY void SECURE_RegisterCallback(SECURE_CallbackIDTypeDef CallbackId, 
 /*CMSE_NS_ENTRY*/secureportNON_SECURE_CALLABLE void SECURE_LEDToggle(void)
 {
   BSP_LED_Toggle(LED1);
+}
+
+
+/*CMSE_NS_ENTRY*/secureportNON_SECURE_CALLABLE void SECURE_RGB_SETPins(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin_data, uint16_t GPIO_Pin_clock){
+  LEDController__initialize(GPIOx,GPIO_Pin_data,GPIO_Pin_clock);
+}
+
+/*CMSE_NS_ENTRY*/secureportNON_SECURE_CALLABLE void SECURE_RGB_SETColor(RGB_STRIP_COLOR color, ONOFF on){
+  uint8_t _r=0,_g=0,_b=0;
+  switch (color)
+  {
+  case BLUE:
+    _b=255; 
+    break;
+  case GREEN:
+    _g=255; 
+    break;
+  
+  default:
+    break;
+  }
+  LEDController__setRGB(_r,_g,_b);
 }
 
 /**

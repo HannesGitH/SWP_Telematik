@@ -23,7 +23,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-#include "p9813controller.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -272,14 +271,13 @@ void LED_Thread(void *argument)
 void LEDStripper(void *argument)
 {
   /* USER CODE BEGIN LEDStripper */
+  portALLOCATE_SECURE_CONTEXT (configMINIMAL_SECURE_STACK_SIZE);
+	SECURE_RGB_SETPins(GPIOD,GPIO_PIN_6,GPIO_PIN_7); 
   /* Infinite loop */
-	LEDController__initialize(GPIOD,GPIO_PIN_6,GPIO_PIN_7);
   for(;;)
   {
 	  osDelay(500);
-	  LEDController__setRGB(0,0,0);
-	  osDelay(500);
-	  LEDController__setRGB(255,255,255);
+	  SECURE_RGB_SETColor(GREEN,ON);
   }
   /* USER CODE END LEDStripper */
 }

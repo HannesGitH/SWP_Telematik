@@ -21,9 +21,9 @@ void _LEDController__send32bitSequence(uint32_t sequence){
 
 		//Toggle clock (rising edge)
 		HAL_GPIO_WritePin(_GPIOx, _clockPIN, GPIO_PIN_RESET);
-		osDelay(1);						//give p9813 some time (datasheet says he needs up to 500nanoseconds)
+		HAL_Delay(1);						//give p9813 some time (datasheet says he needs up to 500nanoseconds)
 		HAL_GPIO_WritePin(_GPIOx, _clockPIN, GPIO_PIN_SET);
-		osDelay(1);						//give p9813 some time
+		HAL_Delay(1);						//give p9813 some time
 	}
 }
 
@@ -42,21 +42,26 @@ void _LEDController__writeColor(){
 	_LEDController__send32bitSequence(0);               //start Data
 	_LEDController__send32bitSequence(_sequence);
 	_LEDController__send32bitSequence(0);               //end Data
-	}
+}
 
 void LEDController__initialize(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin_data, uint16_t GPIO_Pin_clock){
 	_dataPIN=GPIO_Pin_data;_clockPIN=GPIO_Pin_clock;_GPIOx=GPIOx;
 
-  	GPIO_InitTypeDef GPIO_Init;
-  	GPIO_Init.Mode  = GPIO_MODE_OUTPUT_PP;
-	GPIO_Init.Pull  = GPIO_PULLUP;
-	GPIO_Init.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+
   	//init data pin
-  	  	GPIO_Init.Pin   = _dataPIN;
-  		HAL_GPIO_Init(_GPIOx, &GPIO_Init);
+		GPIO_InitTypeDef _GPIO_Init;
+		_GPIO_Init.Mode  = GPIO_MODE_OUTPUT_PP;
+		_GPIO_Init.Pull  = GPIO_PULLUP;
+		_GPIO_Init.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+		_GPIO_Init.Pin   = _dataPIN;
+		HAL_GPIO_Init(_GPIOx, &_GPIO_Init);
 	//init clock pin
-		GPIO_Init.Pin   = _clockPIN;
-		HAL_GPIO_Init(_GPIOx, &GPIO_Init);
+		GPIO_InitTypeDef _GPIO_Init_2;
+		_GPIO_Init_2.Mode  = GPIO_MODE_OUTPUT_PP;
+		_GPIO_Init_2.Pull  = GPIO_PULLUP;
+		_GPIO_Init_2.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+		_GPIO_Init_2.Pin   = _clockPIN;
+		HAL_GPIO_Init(_GPIOx, &_GPIO_Init_2);
 
 }
 

@@ -14,7 +14,20 @@
       <ProjectName>demonstrator_NS_CM33</ProjectName>
       <ProjectNature>C</ProjectNature>
       <Secure>0</Secure>
-      <filestoremove/>
+      <filestoremove>
+        <file>
+          <name>C:\Users\hanne\STM32Cube\Repository\STM32Cube_FW_L5_V1.3.1\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM33\secure\secure_context.c</name>
+        </file>
+        <file>
+          <name>C:\Users\hanne\STM32Cube\Repository\STM32Cube_FW_L5_V1.3.1\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM33\secure\secure_context_port.c</name>
+        </file>
+        <file>
+          <name>C:\Users\hanne\STM32Cube\Repository\STM32Cube_FW_L5_V1.3.1\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM33\secure\secure_heap.c</name>
+        </file>
+        <file>
+          <name>C:\Users\hanne\STM32Cube\Repository\STM32Cube_FW_L5_V1.3.1\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM33\secure\secure_init.c</name>
+        </file>
+      </filestoremove>
       <configs>
         <config>
           <name>demonstrator_NS_CM33</name>
@@ -50,7 +63,6 @@
             <include>NonSecure\Inc</include>
             <include>Secure_nsclib</include>
             <include>../Dependencies/Drivers/BSP</include>
-            <include>Projekt</include>
             <include>C:\Users\hanne\STM32Cube\Repository\STM32Cube_FW_L5_V1.3.1\Drivers\STM32L5xx_HAL_Driver\Inc</include>
             <include>C:\Users\hanne\STM32Cube\Repository\STM32Cube_FW_L5_V1.3.1\Drivers\CMSIS\Device\ST\STM32L5xx\Include</include>
             <include>C:\Users\hanne\STM32Cube\Repository\STM32Cube_FW_L5_V1.3.1\Drivers\STM32L5xx_HAL_Driver\Inc\Legacy</include>
@@ -251,7 +263,41 @@
       <ProjectName>demonstrator_S_CM33</ProjectName>
       <ProjectNature>C</ProjectNature>
       <Secure>1</Secure>
-      <filestoremove/>
+      <filestoremove>
+        <file>
+          <name>C:\Users\hanne\STM32Cube\Repository\STM32Cube_FW_L5_V1.3.1\Middlewares\Third_Party\FreeRTOS\Source\croutine.c</name>
+        </file>
+        <file>
+          <name>C:\Users\hanne\STM32Cube\Repository\STM32Cube_FW_L5_V1.3.1\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c</name>
+        </file>
+        <file>
+          <name>C:\Users\hanne\STM32Cube\Repository\STM32Cube_FW_L5_V1.3.1\Middlewares\Third_Party\FreeRTOS\Source\list.c</name>
+        </file>
+        <file>
+          <name>C:\Users\hanne\STM32Cube\Repository\STM32Cube_FW_L5_V1.3.1\Middlewares\Third_Party\FreeRTOS\Source\queue.c</name>
+        </file>
+        <file>
+          <name>C:\Users\hanne\STM32Cube\Repository\STM32Cube_FW_L5_V1.3.1\Middlewares\Third_Party\FreeRTOS\Source\stream_buffer.c</name>
+        </file>
+        <file>
+          <name>C:\Users\hanne\STM32Cube\Repository\STM32Cube_FW_L5_V1.3.1\Middlewares\Third_Party\FreeRTOS\Source\tasks.c</name>
+        </file>
+        <file>
+          <name>C:\Users\hanne\STM32Cube\Repository\STM32Cube_FW_L5_V1.3.1\Middlewares\Third_Party\FreeRTOS\Source\timers.c</name>
+        </file>
+        <file>
+          <name>C:\Users\hanne\STM32Cube\Repository\STM32Cube_FW_L5_V1.3.1\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2\cmsis_os2.c</name>
+        </file>
+        <file>
+          <name>C:\Users\hanne\STM32Cube\Repository\STM32Cube_FW_L5_V1.3.1\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c</name>
+        </file>
+        <file>
+          <name>C:\Users\hanne\STM32Cube\Repository\STM32Cube_FW_L5_V1.3.1\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM33\non_secure\port.c</name>
+        </file>
+        <file>
+          <name>C:\Users\hanne\STM32Cube\Repository\STM32Cube_FW_L5_V1.3.1\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM33\non_secure\portasm.c</name>
+        </file>
+      </filestoremove>
       <configs>
         <config>
           <name>demonstrator_S_CM33</name>

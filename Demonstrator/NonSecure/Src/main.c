@@ -273,7 +273,7 @@ void LEDStripper(void *argument)
 {
   /* USER CODE BEGIN LEDStripper */
   /* Infinite loop */
-	LEDController__initialize(GPIOD,7,6);
+	LEDController__initialize(GPIOD,GPIO_PIN_6,GPIO_PIN_7);
   for(;;)
   {
 	  osDelay(500);

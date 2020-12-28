@@ -14,6 +14,13 @@ dem Projekt wird demnächst alles nötige an Information hinzugefügt, bis dahin
 
 ### STM32CubeIDE and STM32CubeProgrammer
 
+#### STM32CubeIDE
+
+It is possible to add new folders and files to an existing project, however, if one adds these files the project might not be build right as the new files are not found. Additionally to create these files they must be added to the known paths. To do so, right-click on your project, select projects. There, expand "C/C++ General" > "Paths and Symbols" and "Add" the path to your files.
+The same procedure should be done if one wishes to add further external libraries to the project, which are not automatically added by the IDE.
+
+#### STM32CubeProgrammer
+
 ### TF-M and FreeRTOS
 #### TF-M
 
@@ -33,3 +40,6 @@ If TrustZone is enabled it is not possible to disable it without activating the 
 3. Also in the STM32CubeProgrammer, at the adresse 0x0BF97FFE, the Value should not be 0x00D0
 Once these options have been checked, you might proceed to set the RDP Level to 0.5 or 1. Once you have raised the Level of the Read Out Protection you will not be able to connect yout device with the STM32CubeProgrammer, at least not until you boot to RSS.
 RSS can be booted by connecting Pin 5 and 7 at C11. Once these Pins are connected, you can reset the device. If the blue and red LED are turned on, you have sucessfully bootes to RSS. Now you can connect with the STM32CubeProgrammer and disable the Read Out Protection and TrustZone (TZEN Bit). After another reset, the device should be fully accessible and TrustZone is diabled
+
+#### I added a new File in my project and now I can't run/debug the project
+You have probably forgotten to announce the exisitence of these files to your IDE. Checkout the chapter "STM32CubeIDE and STM32CubeProgrammer" to see how to fix this Issue.

@@ -1,0 +1,11 @@
+portasm.c:42:6:vRestoreContextOfFirstTask	0	static,ignoring_inline_asm
+portasm.c:114:12:xIsPrivileged	0	static,ignoring_inline_asm
+portasm.c:131:6:vRaisePrivilege	0	static,ignoring_inline_asm
+portasm.c:144:6:vResetPrivilege	0	static,ignoring_inline_asm
+portasm.c:157:6:vStartFirstTask	0	static,ignoring_inline_asm
+portasm.c:179:10:ulSetInterruptMaskFromISR	0	static,ignoring_inline_asm
+portasm.c:198:6:vClearInterruptMaskFromISR	0	static,ignoring_inline_asm
+portasm.c:217:6:PendSV_Handler	0	static,ignoring_inline_asm
+portasm.c:374:6:SVC_Handler	0	static,ignoring_inline_asm
+portasm.c:391:6:vPortAllocateSecureContext	0	static,ignoring_inline_asm
+portasm.c:402:6:vPortFreeSecureContext	0	static,ignoring_inline_asm

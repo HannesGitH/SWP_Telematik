@@ -1,0 +1,5 @@
+main.c:70:5:main	40	static
+main.c:153:13:NonSecure_Init	24	static,ignoring_inline_asm
+main.c:174:13:MX_GTZC_Init	224	static
+main.c:244:13:MX_ICACHE_Init	8	static
+main.c:274:6:Error_Handler	4	static

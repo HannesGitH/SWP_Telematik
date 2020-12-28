@@ -1,0 +1,2 @@
+secure_nsc.c:50:20:SECURE_RegisterCallback	16	static
+secure_nsc.c:73:53:SECURE_LEDToggle	8	static

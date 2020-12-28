@@ -1,0 +1,3 @@
+secure_context.c:68:36:SecureContext_Init	16	static,ignoring_inline_asm
+secure_context.c:101:54:SecureContext_AllocateContext	32	static,ignoring_inline_asm
+secure_context.c:183:36:SecureContext_FreeContext	24	static,ignoring_inline_asm

@@ -1,0 +1,2 @@
+secure_init.c:62:36:SecureInit_DePrioritizeNSExceptions	16	static,ignoring_inline_asm
+secure_init.c:80:36:SecureInit_EnableNSFPUAccess	16	static,ignoring_inline_asm

@@ -85,7 +85,7 @@ int main(void)
 
   /* USER CODE END Init */
 
-  /* GTZC initialisation */
+  /* MX_GTZC_Init initialisation */
   MX_GTZC_Init();
 
   /* USER CODE BEGIN SysInit */

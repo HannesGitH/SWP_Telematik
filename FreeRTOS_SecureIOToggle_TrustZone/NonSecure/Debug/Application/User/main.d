@@ -47,7 +47,16 @@ Application/User/main.o: \
  ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
  ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
- ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
+ ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
+ ../../../NonSecure/Inc/mbedtls.h ../../../NonSecure/Inc/mbedtls_config.h \
+ C:/Users/Maste/STM32Cube/Repository/STM32Cube_FW_L5_V1.3.1/Middlewares/Third_Party/mbedTLS/include/mbedtls/check_config.h \
+ C:/Users/Maste/git/STM32CubeL5/Projects/NUCLEO-L552ZE-Q/Applications/FreeRTOS/FreeRTOS_SecureIOToggle_TrustZone/STM32CubeIDE/NonSecure/Application/User/SWP_Module/include/work.h \
+ C:/Users/Maste/git/STM32CubeL5/Projects/NUCLEO-L552ZE-Q/Applications/FreeRTOS/FreeRTOS_SecureIOToggle_TrustZone/STM32CubeIDE/NonSecure/Application/User/SWP_Module/include/server.h \
+ C:/Users/Maste/git/amazon-freertos/lib/FreeRTOS-Plus-TCP/include/FreeRTOS_Sockets.h \
+ C:/Users/Maste/git/amazon-freertos/tests/vendor/board/common/config_files/FreeRTOSIPConfig.h \
+ ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
+ ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
+ ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 
 ../../../NonSecure/Inc/main.h:
 
@@ -144,3 +153,23 @@ Application/User/main.o: \
 ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
 
 ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
+
+../../../NonSecure/Inc/mbedtls.h:
+
+../../../NonSecure/Inc/mbedtls_config.h:
+
+C:/Users/Maste/STM32Cube/Repository/STM32Cube_FW_L5_V1.3.1/Middlewares/Third_Party/mbedTLS/include/mbedtls/check_config.h:
+
+C:/Users/Maste/git/STM32CubeL5/Projects/NUCLEO-L552ZE-Q/Applications/FreeRTOS/FreeRTOS_SecureIOToggle_TrustZone/STM32CubeIDE/NonSecure/Application/User/SWP_Module/include/work.h:
+
+C:/Users/Maste/git/STM32CubeL5/Projects/NUCLEO-L552ZE-Q/Applications/FreeRTOS/FreeRTOS_SecureIOToggle_TrustZone/STM32CubeIDE/NonSecure/Application/User/SWP_Module/include/server.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/FreeRTOS-Plus-TCP/include/FreeRTOS_Sockets.h:
+
+C:/Users/Maste/git/amazon-freertos/tests/vendor/board/common/config_files/FreeRTOSIPConfig.h:
+
+../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h:
+
+../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
+
+../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:

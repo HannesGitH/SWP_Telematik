@@ -8,6 +8,10 @@ Application/User/SWP_Module/work.o: ../Application/User/SWP_Module/work.c \
  ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L5xx/Include/stm32l5xx.h \
  ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L5xx/Include/stm32l552xx.h \
  ../../../../../../../../Drivers/CMSIS/Include/core_cm33.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/stdint.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/machine/_default_types.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/features.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/_intsup.h \
  ../../../../../../../../Drivers/CMSIS/Include/cmsis_version.h \
  ../../../../../../../../Drivers/CMSIS/Include/cmsis_compiler.h \
  ../../../../../../../../Drivers/CMSIS/Include/cmsis_gcc.h \
@@ -34,7 +38,18 @@ Application/User/SWP_Module/work.o: ../Application/User/SWP_Module/work.c \
  ../../../../../../../../Drivers/STM32L5xx_HAL_Driver/Inc/stm32l5xx_hal_uart.h \
  ../../../../../../../../Drivers/STM32L5xx_HAL_Driver/Inc/stm32l5xx_hal_uart_ex.h \
  ../../../../../../../../Drivers/BSP/STM32L5xx_Nucleo/stm32l5xx_nucleo_errno.h \
- ../../../Secure_nsclib/secure_nsc.h
+ ../../../Secure_nsclib/secure_nsc.h \
+ ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
+ ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
+ ../../../NonSecure/Inc/FreeRTOSConfig.h \
+ ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
+ ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h \
+ ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h \
+ ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM33/non_secure/portmacro.h \
+ ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
+ ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
+ ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
+ ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 
 ../../../../../../../../Drivers/BSP/STM32L5xx_Nucleo/stm32l5xx_nucleo.h:
 
@@ -53,6 +68,14 @@ Application/User/SWP_Module/work.o: ../Application/User/SWP_Module/work.c \
 ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L5xx/Include/stm32l552xx.h:
 
 ../../../../../../../../Drivers/CMSIS/Include/core_cm33.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/stdint.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/machine/_default_types.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/features.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/_intsup.h:
 
 ../../../../../../../../Drivers/CMSIS/Include/cmsis_version.h:
 
@@ -107,3 +130,25 @@ Application/User/SWP_Module/work.o: ../Application/User/SWP_Module/work.c \
 ../../../../../../../../Drivers/BSP/STM32L5xx_Nucleo/stm32l5xx_nucleo_errno.h:
 
 ../../../Secure_nsclib/secure_nsc.h:
+
+../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
+
+../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
+
+../../../NonSecure/Inc/FreeRTOSConfig.h:
+
+../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
+
+../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h:
+
+../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h:
+
+../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM33/non_secure/portmacro.h:
+
+../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h:
+
+../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
+
+../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
+
+../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:

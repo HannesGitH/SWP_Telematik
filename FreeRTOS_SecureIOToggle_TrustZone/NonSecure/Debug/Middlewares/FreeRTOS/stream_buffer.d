@@ -1,5 +1,22 @@
 Middlewares/FreeRTOS/stream_buffer.o: \
  C:/Users/Maste/git/STM32CubeL5/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/stdint.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/machine/_default_types.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/features.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/_intsup.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/string.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/_ansi.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/newlib.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/config.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/machine/ieeefp.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/reent.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/_ansi.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/_types.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/machine/_types.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/lock.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/assert.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/cdefs.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/string.h \
  ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../../NonSecure/Inc/FreeRTOSConfig.h \
  ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
@@ -10,6 +27,40 @@ Middlewares/FreeRTOS/stream_buffer.o: \
  ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
  ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/stdint.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/machine/_default_types.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/features.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/_intsup.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/string.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/_ansi.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/newlib.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/config.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/machine/ieeefp.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/reent.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/_ansi.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/_types.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/machine/_types.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/lock.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/assert.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/cdefs.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/string.h:
 
 ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 

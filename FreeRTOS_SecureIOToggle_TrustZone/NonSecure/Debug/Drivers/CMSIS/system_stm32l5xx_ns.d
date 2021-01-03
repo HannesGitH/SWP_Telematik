@@ -3,6 +3,10 @@ Drivers/CMSIS/system_stm32l5xx_ns.o: \
  ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L5xx/Include/stm32l5xx.h \
  ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L5xx/Include/stm32l552xx.h \
  ../../../../../../../../Drivers/CMSIS/Include/core_cm33.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/stdint.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/machine/_default_types.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/features.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/_intsup.h \
  ../../../../../../../../Drivers/CMSIS/Include/cmsis_version.h \
  ../../../../../../../../Drivers/CMSIS/Include/cmsis_compiler.h \
  ../../../../../../../../Drivers/CMSIS/Include/cmsis_gcc.h \
@@ -38,6 +42,14 @@ Drivers/CMSIS/system_stm32l5xx_ns.o: \
 ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L5xx/Include/stm32l552xx.h:
 
 ../../../../../../../../Drivers/CMSIS/Include/core_cm33.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/stdint.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/machine/_default_types.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/features.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/_intsup.h:
 
 ../../../../../../../../Drivers/CMSIS/Include/cmsis_version.h:
 

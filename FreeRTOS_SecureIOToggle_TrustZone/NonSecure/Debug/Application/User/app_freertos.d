@@ -1,6 +1,10 @@
 Application/User/app_freertos.o: \
  C:/Users/Maste/git/STM32CubeL5/Projects/NUCLEO-L552ZE-Q/Applications/FreeRTOS/FreeRTOS_SecureIOToggle_TrustZone/NonSecure/Src/app_freertos.c \
  ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/stdint.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/machine/_default_types.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/features.h \
+ C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/_intsup.h \
  ../../../NonSecure/Inc/FreeRTOSConfig.h \
  ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
  ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h \
@@ -48,6 +52,14 @@ Application/User/app_freertos.o: \
  ../../../../../../../../Drivers/BSP/STM32L5xx_Nucleo/stm32l5xx_nucleo_errno.h
 
 ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/stdint.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/machine/_default_types.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/features.h:
+
+C:/Users/Maste/git/amazon-freertos/lib/third_party/mcu_vendor/espressif/esp-idf/components/newlib/include/sys/_intsup.h:
 
 ../../../NonSecure/Inc/FreeRTOSConfig.h:
 

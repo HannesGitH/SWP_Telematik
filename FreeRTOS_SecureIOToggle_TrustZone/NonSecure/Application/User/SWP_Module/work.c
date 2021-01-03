@@ -7,6 +7,7 @@
 
 #include "stm32l5xx_nucleo.h"
 #include "secure_nsc.h"
+#include "cmsis_os.h"
 
 #define HERZSCHLAG_INTERVALL 750			//the heartbeat is normal
 #define HERZSCHLAG_BRADYKARDIE 500			//the heartbeat is too slow

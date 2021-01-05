@@ -14,5 +14,5 @@ extern "C" int runThread1() {
 		LEDController__setRGB(255, 255, 255);
 	}
 
-return 1;
+return SUCCESS;
 }

@@ -29,6 +29,7 @@
 		<nature>com.st.stm32cube.ide.mcu.MCUSingleCpuProjectNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
+		<nature>org.eclipse.cdt.core.ccnature</nature>
 	</natures>
 	<linkedResources>
 		<link>
@@ -42,9 +43,9 @@
 			<location>C:/Users/hanne/Documents/UNI/Sem1/swp/SWP/SWP_Telematik/Demonstrator/NonSecure/Src/p9813controller.c</location>
 		</link>
 		<link>
-			<name>ProjektDateien/thread1.c</name>
+			<name>ProjektDateien/thread1.cpp</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/NonSecure/Src/thread1.c</locationURI>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/NonSecure/Src/thread1.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/app_freertos.c</name>

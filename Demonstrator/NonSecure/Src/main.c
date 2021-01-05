@@ -48,6 +48,13 @@ const osThreadAttr_t defaultTask_attributes = {
   .priority = (osPriority_t) osPriorityNormal,
   .stack_size = 128
 };
+/* Definitions for task1 */
+osThreadId_t task1Handle;
+const osThreadAttr_t task1_attributes = {
+  .name = "task1",
+  .priority = (osPriority_t) osPriorityNormal,
+  .stack_size = 128
+};
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -55,6 +62,7 @@ const osThreadAttr_t defaultTask_attributes = {
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 void StartDefaultTask(void *argument);
+void StartTask01(void *argument);
 
 /* USER CODE BEGIN PFP */
 void SecureFault_Callback(void);
@@ -126,6 +134,9 @@ int main(void)
   /* creation of defaultTask */
   defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
 
+  /* creation of task1 */
+  task1Handle = osThreadNew(StartTask01, NULL, &task1_attributes);
+
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
@@ -142,6 +153,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  osDelay(200);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -237,10 +249,38 @@ void SecureError_Callback(void)
 /* USER CODE END Header_StartDefaultTask */
 void StartDefaultTask(void *argument)
 {
-  /* USER CODE BEGIN 5 */
-	#include "thread1.h"
-	runThread1();
-  /* USER CODE END 5 */
+	/* USER CODE BEGIN 5 */
+	  (void) argument;
+
+	  portALLOCATE_SECURE_CONTEXT (configMINIMAL_SECURE_STACK_SIZE);
+
+	  for (;;)
+	  {
+	    /* Toggle secure LED4 (LED_GREEN) */
+	    SECURE_LEDToggle();
+	    osDelay(200);
+	  }
+	  /* USER CODE END 5 */
+}
+
+/* USER CODE BEGIN Header_StartTask01 */
+/**
+* @brief Function implementing the task1 thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartTask01 */
+void StartTask01(void *argument)
+{
+  /* USER CODE BEGIN StartTask01 */
+
+	//runThread1();
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END StartTask01 */
 }
 
  /**

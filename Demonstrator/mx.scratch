@@ -12,7 +12,7 @@
     <IocFile>demonstrator.ioc</IocFile>
     <Project>
       <ProjectName>demonstrator_NS_CM33</ProjectName>
-      <ProjectNature>C</ProjectNature>
+      <ProjectNature>CPP</ProjectNature>
       <Secure>0</Secure>
       <filestoremove>
         <file>
@@ -261,7 +261,7 @@
     </Project>
     <Project>
       <ProjectName>demonstrator_S_CM33</ProjectName>
-      <ProjectNature>C</ProjectNature>
+      <ProjectNature>CPP</ProjectNature>
       <Secure>1</Secure>
       <filestoremove>
         <file>

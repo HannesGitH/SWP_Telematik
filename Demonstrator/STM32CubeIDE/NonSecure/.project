@@ -42,6 +42,11 @@
 			<location>C:/Users/hanne/Documents/UNI/Sem1/swp/SWP/SWP_Telematik/Demonstrator/NonSecure/Src/p9813controller.c</location>
 		</link>
 		<link>
+			<name>ProjektDateien/thread1.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/NonSecure/Src/thread1.c</locationURI>
+		</link>
+		<link>
 			<name>Application/User/app_freertos.c</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/NonSecure/Src/app_freertos.c</locationURI>
@@ -65,11 +70,6 @@
 			<name>Application/User/stm32l5xx_it.c</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/NonSecure/Src/stm32l5xx_it.c</locationURI>
-		</link>
-		<link>
-			<name>Application/User/thread1.cpp</name>
-			<type>1</type>
-			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/NonSecure/Src/thread1.cpp</locationURI>
 		</link>
 		<link>
 			<name>Drivers/BSP/stm32l5xx_nucleo.c</name>

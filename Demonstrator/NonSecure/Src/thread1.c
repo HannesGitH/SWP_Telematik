@@ -1,9 +1,10 @@
-extern "C" {
+//extern "C" {
 #include "p9813controller.h"
-}
+#include "cmsis_os.h"
+//}
 #include "thread1.h"
 
-extern "C" int runThread1() {
+/*extern "C" */int runThread1() {
 
 	LEDController__initialize(GPIOD, GPIO_PIN_6, GPIO_PIN_7);
 	for (;;) {
@@ -13,5 +14,5 @@ extern "C" int runThread1() {
 		LEDController__setRGB(255, 255, 255);
 	}
 
-return SUCCESS
+return SUCCESS;
 }

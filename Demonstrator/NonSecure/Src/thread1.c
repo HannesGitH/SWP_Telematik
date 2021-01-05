@@ -8,9 +8,9 @@
 
 	LEDController__initialize(GPIOD, GPIO_PIN_6, GPIO_PIN_7);
 	for (;;) {
-		osDelay(500);
+		osDelay(100);
 		LEDController__setRGB(0, 0, 0);
-		osDelay(500);
+		osDelay(1000);
 		LEDController__setRGB(255, 255, 255);
 	}
 

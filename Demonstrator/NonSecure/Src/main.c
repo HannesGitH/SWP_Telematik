@@ -23,7 +23,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-//#include "thread1.h"
+#include "thread1.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -271,7 +271,7 @@ void LED_Thread(void *argument)
 void LEDStripper(void *argument)
 {
   /* USER CODE BEGIN LEDStripper */
-  //runThread1();
+  runThread1();
   /* USER CODE END LEDStripper */
 }
 

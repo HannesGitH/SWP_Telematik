@@ -1,8 +1,9 @@
 #MicroXplorer Configuration settings - do not modify
 CortexM33NS.IPs=FREERTOS\:I,PWR,RCC,RTC,SYS\:I,TAMP,DMA\:I,NVIC2\:I,TIM6\:I
 CortexM33S.IPs=GTZC\:I,PWR\:I,RCC\:I,RTC\:I,SYS_S\:I,TAMP\:I,DMA,NVIC1\:I,ICACHE\:I
-FREERTOS.IPParameters=Tasks01
-FREERTOS.Tasks01=defaultTask,24,128,StartDefaultTask,Default,NULL,Dynamic,NULL,NULL
+FREERTOS.FootprintOK=true
+FREERTOS.IPParameters=Tasks01,FootprintOK
+FREERTOS.Tasks01=defaultTask,24,128,StartDefaultTask,Default,NULL,Dynamic,NULL,NULL;task1,24,128,StartTask01,Default,NULL,Dynamic,NULL,NULL
 File.Version=6
 GPIO.groupedBy=
 KeepUserPlacement=false

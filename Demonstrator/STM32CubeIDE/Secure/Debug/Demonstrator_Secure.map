@@ -4351,7 +4351,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0xef Middlewares/FreeRTOS/secure_context.o
  .debug_macro   0x0000000000000000       0x6a Middlewares/FreeRTOS/secure_context.o
  .debug_macro   0x0000000000000000      0x1df Middlewares/FreeRTOS/secure_context.o
- .debug_macro   0x0000000000000000      0x162 Middlewares/FreeRTOS/secure_context.o
+ .debug_macro   0x0000000000000000      0x135 Middlewares/FreeRTOS/secure_context.o
  .debug_macro   0x0000000000000000       0x18 Middlewares/FreeRTOS/secure_context.o
  .debug_macro   0x0000000000000000       0x46 Middlewares/FreeRTOS/secure_context.o
  .debug_macro   0x0000000000000000       0x3c Middlewares/FreeRTOS/secure_context.o
@@ -4369,7 +4369,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x29 Middlewares/FreeRTOS/secure_context.o
  .debug_macro   0x0000000000000000       0x70 Middlewares/FreeRTOS/secure_context.o
  .debug_line    0x0000000000000000      0x5f1 Middlewares/FreeRTOS/secure_context.o
- .debug_str     0x0000000000000000     0x7f74 Middlewares/FreeRTOS/secure_context.o
+ .debug_str     0x0000000000000000     0x7e73 Middlewares/FreeRTOS/secure_context.o
  .comment       0x0000000000000000       0x7c Middlewares/FreeRTOS/secure_context.o
  .debug_frame   0x0000000000000000       0x88 Middlewares/FreeRTOS/secure_context.o
  .ARM.attributes
@@ -4399,10 +4399,10 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0xef Middlewares/FreeRTOS/secure_context_port.o
  .debug_macro   0x0000000000000000       0x6a Middlewares/FreeRTOS/secure_context_port.o
  .debug_macro   0x0000000000000000      0x1df Middlewares/FreeRTOS/secure_context_port.o
- .debug_macro   0x0000000000000000      0x162 Middlewares/FreeRTOS/secure_context_port.o
+ .debug_macro   0x0000000000000000      0x135 Middlewares/FreeRTOS/secure_context_port.o
  .debug_macro   0x0000000000000000       0x70 Middlewares/FreeRTOS/secure_context_port.o
  .debug_line    0x0000000000000000      0x461 Middlewares/FreeRTOS/secure_context_port.o
- .debug_str     0x0000000000000000     0x4b48 Middlewares/FreeRTOS/secure_context_port.o
+ .debug_str     0x0000000000000000     0x4a47 Middlewares/FreeRTOS/secure_context_port.o
  .comment       0x0000000000000000       0x7c Middlewares/FreeRTOS/secure_context_port.o
  .debug_frame   0x0000000000000000       0x60 Middlewares/FreeRTOS/secure_context_port.o
  .ARM.attributes

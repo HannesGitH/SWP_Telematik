@@ -23,7 +23,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-#include "p9813controller.h"
+#include "thread1.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -41,12 +41,19 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-/* Definitions for defaultTask */
-osThreadId_t defaultTaskHandle;
-const osThreadAttr_t defaultTask_attributes = {
-  .name = "defaultTask",
+/* Definitions for LEDThreadHandle */
+osThreadId_t LEDThreadHandleHandle;
+const osThreadAttr_t LEDThreadHandle_attributes = {
+  .name = "LEDThreadHandle",
   .priority = (osPriority_t) osPriorityNormal,
-  .stack_size = 128
+  .stack_size = 512
+};
+/* Definitions for LEDStripHandler */
+osThreadId_t LEDStripHandlerHandle;
+const osThreadAttr_t LEDStripHandler_attributes = {
+  .name = "LEDStripHandler",
+  .priority = (osPriority_t) osPriorityLow,
+  .stack_size = 512
 };
 /* USER CODE BEGIN PV */
 
@@ -54,7 +61,8 @@ const osThreadAttr_t defaultTask_attributes = {
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-void StartDefaultTask(void *argument);
+void LED_Thread(void *argument);
+void LEDStripper(void *argument);
 
 /* USER CODE BEGIN PFP */
 void SecureFault_Callback(void);
@@ -123,8 +131,11 @@ int main(void)
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
-  /* creation of defaultTask */
-  defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
+  /* creation of LEDThreadHandle */
+  LEDThreadHandleHandle = osThreadNew(LED_Thread, NULL, &LEDThreadHandle_attributes);
+
+  /* creation of LEDStripHandler */
+  LEDStripHandlerHandle = osThreadNew(LEDStripper, NULL, &LEDStripHandler_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -228,14 +239,14 @@ void SecureError_Callback(void)
 }
 /* USER CODE END 4 */
 
-/* USER CODE BEGIN Header_StartDefaultTask */
+/* USER CODE BEGIN Header_LED_Thread */
 /**
-  * @brief  Function implementing the defaultTask thread.
-  * @param  argument: Not used
+  * @brief  Function implementing the LEDThreadHandle thread.
+  * @param  argument: Not used 
   * @retval None
   */
-/* USER CODE END Header_StartDefaultTask */
-void StartDefaultTask(void *argument)
+/* USER CODE END Header_LED_Thread */
+void LED_Thread(void *argument)
 {
   /* USER CODE BEGIN 5 */
   (void) argument;
@@ -244,9 +255,8 @@ void StartDefaultTask(void *argument)
   
   for (;;)
   {
-    /* Toggle secure LED4 (LED_GREEN) */
-    SECURE_LEDToggle();
-    osDelay(200);
+
+    osDelay(1000);
   }
   /* USER CODE END 5 */
 }
@@ -261,15 +271,7 @@ void StartDefaultTask(void *argument)
 void LEDStripper(void *argument)
 {
   /* USER CODE BEGIN LEDStripper */
-  /* Infinite loop */
-	LEDController__initialize(GPIOD,GPIO_PIN_6,GPIO_PIN_7);
-  for(;;)
-  {
-	  osDelay(500);
-	  LEDController__setRGB(0,0,0);
-	  osDelay(500);
-	  LEDController__setRGB(255,255,255);
-  }
+  runThread1();
   /* USER CODE END LEDStripper */
 }
 

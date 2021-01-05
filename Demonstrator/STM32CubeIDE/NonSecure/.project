@@ -32,14 +32,14 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>ProjektDateien/thread1.cpp</name>
-			<type>1</type>
-			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/NonSecure/Src/thread1.cpp</locationURI>
-		</link>
-		<link>
 			<name>Doc/readme.txt</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/readme.txt</locationURI>
+		</link>
+		<link>
+			<name>ProjektDateien/p9813controller.c</name>
+			<type>1</type>
+			<location>C:/Users/hanne/Documents/UNI/Sem1/swp/SWP/SWP_Telematik/Demonstrator/NonSecure/Src/p9813controller.c</location>
 		</link>
 		<link>
 			<name>Application/User/app_freertos.c</name>
@@ -65,6 +65,11 @@
 			<name>Application/User/stm32l5xx_it.c</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/NonSecure/Src/stm32l5xx_it.c</locationURI>
+		</link>
+		<link>
+			<name>Application/User/thread1.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/NonSecure/Src/thread1.cpp</locationURI>
 		</link>
 		<link>
 			<name>Drivers/BSP/stm32l5xx_nucleo.c</name>
@@ -235,11 +240,6 @@
 			<name>Middlewares/FreeRTOS/timers.c</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-3-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/timers.c</locationURI>
-		</link>
-		<link>
-			<name>ProjektDateien/p9813controller.c</name>
-			<type>1</type>
-			<location>C:/Users/hanne/Documents/UNI/Sem1/swp/SWP/SWP_Telematik/Demonstrator/NonSecure/Src/p9813controller.c</location>
 		</link>
 	</linkedResources>
 </projectDescription>

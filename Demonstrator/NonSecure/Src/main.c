@@ -238,31 +238,9 @@ void SecureError_Callback(void)
 void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
-  (void) argument;
-  
-  portALLOCATE_SECURE_CONTEXT (configMINIMAL_SECURE_STACK_SIZE);
-  
-  for (;;)
-  {
-    /* Toggle secure LED4 (LED_GREEN) */
-    SECURE_LEDToggle();
-    osDelay(200);
-  }
+	#include "thread1.h"
+	runThread1();
   /* USER CODE END 5 */
-}
-
-/* USER CODE BEGIN Header_LEDStripper */
-/**
-* @brief Function implementing the LEDStripHandler thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_LEDStripper */
-void LEDStripper(void *argument)
-{
-  /* USER CODE BEGIN LEDStripper */
- runThread1();
-  /* USER CODE END LEDStripper */
 }
 
  /**

@@ -23,6 +23,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+#include "p9813controller.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -248,6 +249,28 @@ void StartDefaultTask(void *argument)
     osDelay(200);
   }
   /* USER CODE END 5 */
+}
+
+/* USER CODE BEGIN Header_LEDStripper */
+/**
+* @brief Function implementing the LEDStripHandler thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_LEDStripper */
+void LEDStripper(void *argument)
+{
+  /* USER CODE BEGIN LEDStripper */
+  /* Infinite loop */
+	LEDController__initialize(GPIOD,GPIO_PIN_6,GPIO_PIN_7);
+  for(;;)
+  {
+	  osDelay(500);
+	  LEDController__setRGB(0,0,0);
+	  osDelay(500);
+	  LEDController__setRGB(255,255,255);
+  }
+  /* USER CODE END LEDStripper */
 }
 
  /**

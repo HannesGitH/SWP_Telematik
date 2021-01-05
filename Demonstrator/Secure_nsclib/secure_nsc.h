@@ -23,8 +23,6 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include <stdint.h>
-//#include "STM32L552xx.h" //die oder die dadrunter
-#include "stm32l5xx_nucleo.h"
 
 /* Exported types ------------------------------------------------------------*/
 /**
@@ -36,26 +34,11 @@ typedef enum
   GTZC_ERROR_CB_ID       = 0x01U  /*!< GTZC secure error callback ID */
 } SECURE_CallbackIDTypeDef;
 
-typedef enum
-{
-  BLUE     = 1, 
-  GREEN       = 2  
-} RGB_STRIP_COLOR;
-
-typedef enum
-{
-  ON     = 1, 
-  OFF       = 0  
-} ONOFF;
-
 /* Exported constants --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Exported functions ------------------------------------------------------- */
 void SECURE_RegisterCallback(SECURE_CallbackIDTypeDef CallbackId, void *func);
 void SECURE_LEDToggle(void);
-
-void SECURE_RGBToggle(RGB_STRIP_COLOR, ONOFF);
-void SECURE_RGB_SETPins(GPIO_TypeDef *, uint16_t, uint16_t );
 
 #endif /* SECURE_NSC_H */
 /* USER CODE END Non_Secure_CallLib_h */

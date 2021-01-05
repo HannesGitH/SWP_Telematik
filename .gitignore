@@ -5,6 +5,9 @@
 **makefile
 **.mk
 **.list
+**.launch
+**.bin
+**.elf
 
 # preferences
 **/.settings/

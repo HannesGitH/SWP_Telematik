@@ -1,5 +1,5 @@
-#ifndef P9813CONTROLLER_Hpp
-#define P9813CONTROLLER_Hpp
+#ifndef P9813CONTROLLER_HPP
+#define P9813CONTROLLER_HPP
 
 extern "C"{
 #include "stm32l5xx_nucleo.h"

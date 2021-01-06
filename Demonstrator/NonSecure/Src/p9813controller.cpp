@@ -13,9 +13,9 @@ void LEDController::send32bitSequence(uint32_t sequence){
 
 		//Toggle clock (rising edge)
 		HAL_GPIO_WritePin(GPIOx, clockPIN, GPIO_PIN_RESET);
-		osDelay(1);						//give p9813 some time (datasheet says he needs up to 500nanoseconds)
+		HAL_Delay(1);						//give p9813 some time (datasheet says he needs up to 500nanoseconds)
 		HAL_GPIO_WritePin(GPIOx, clockPIN, GPIO_PIN_SET);
-		osDelay(1);						//give p9813 some time
+		HAL_Delay(1);						//give p9813 some time
 	}
 }
 
@@ -41,6 +41,7 @@ void LEDController::writeColor(){
 
 LEDController::LEDController(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin_data, uint16_t GPIO_Pin_clock){
 	dataPIN=GPIO_Pin_data;clockPIN=GPIO_Pin_clock;
+	this->GPIOx=GPIOx;
 
   	GPIO_InitTypeDef GPIO_Init;
   	GPIO_Init.Mode  = GPIO_MODE_OUTPUT_PP;

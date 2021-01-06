@@ -271,6 +271,7 @@ void LED_Thread(void *argument)
 void LEDStripper(void *argument)
 {
   /* USER CODE BEGIN LEDStripper */
+portALLOCATE_SECURE_CONTEXT (configMINIMAL_SECURE_STACK_SIZE);
   runThread1();
   /* USER CODE END LEDStripper */
 }

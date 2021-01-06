@@ -30,6 +30,7 @@ class P9813Controller{
       * @param  GPIO_Pin_clock specifies the pin to the p9813 clock line
       * @retval P9813Controller
       */
+    P9813Controller(){}
     P9813Controller(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin_data, uint16_t GPIO_Pin_clock);
     ~P9813Controller(){}
 

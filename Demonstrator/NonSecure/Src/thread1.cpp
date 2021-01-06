@@ -2,11 +2,12 @@ extern "C" {
 #include "cmsis_os.h"
 #include "thread1.h"
 }
-#include "p9813controller.hpp"
+#include "ledcontroller.hpp"
 
 extern "C" int runThread1() {
 
-	LEDController ledC(GPIOD, GPIO_PIN_6, GPIO_PIN_7);
+	P9813DATA p9813data = {GPIOD, GPIO_PIN_6, GPIO_PIN_7};
+	LEDController ledC(p9813data,LEDPINDATA{});
 	for (;;) {
 		osDelay(100);
 		ledC.setRGB(0, 0, 0);

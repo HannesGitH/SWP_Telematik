@@ -1,6 +1,10 @@
-#include "p9813controller.h"
+#include "p9813controller.hpp"
+
+extern "C"{
 #include "constant.h"
-#include "stm32l5xx_hal_def.h"
+#include "cmsis_os.h"
+#include "stm32l5xx_nucleo.h"
+}
 
 void LEDController::send32bitSequence(uint32_t sequence){
     for(int8_t i=31;i>=0;i--){
@@ -30,6 +34,9 @@ void LEDController::writeColor(){
 	send32bitSequence(0);               //start Data
 	send32bitSequence(sequence);
 	send32bitSequence(0);               //end Data
+
+
+	//TODO: Write to onBoard LEDS
 	}
 
 LEDController::LEDController(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin_data, uint16_t GPIO_Pin_clock){
@@ -40,10 +47,10 @@ LEDController::LEDController(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin_data, uint16
 	GPIO_Init.Pull  = GPIO_PULLUP;
 	GPIO_Init.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   	//init data pin
-  	  	GPIO_Init.Pin   = dataPin;
+  	  	GPIO_Init.Pin   = dataPIN;
   		HAL_GPIO_Init(GPIOx, &GPIO_Init);
 	//init clock pin
-		GPIO_Init.Pin   = clockPin;
+		GPIO_Init.Pin   = clockPIN;
 		HAL_GPIO_Init(GPIOx, &GPIO_Init);
 
 }

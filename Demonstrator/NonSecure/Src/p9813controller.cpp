@@ -6,7 +6,7 @@ extern "C"{
 #include "stm32l5xx_nucleo.h"
 }
 
-void LEDController::send32bitSequence(uint32_t sequence){
+void P9813Controller::send32bitSequence(uint32_t sequence){
     for(int8_t i=31;i>=0;i--){
 
 		HAL_GPIO_WritePin(GPIOx, dataPIN, ((sequence>>i)&1)?GPIO_PIN_SET:GPIO_PIN_RESET);//fetch and write next bit from sequence
@@ -19,7 +19,7 @@ void LEDController::send32bitSequence(uint32_t sequence){
 	}
 }
 
-void LEDController::writeColor(){
+void P9813Controller::writeColor(){
 
 	//this is what the protocol of the p9813 requires:
 	bgr=(b<<16)|(g<<8)|r;
@@ -35,11 +35,9 @@ void LEDController::writeColor(){
 	send32bitSequence(sequence);
 	send32bitSequence(0);               //end Data
 
-
-	//TODO: Write to onBoard LEDS
 	}
 
-LEDController::LEDController(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin_data, uint16_t GPIO_Pin_clock){
+P9813Controller::P9813Controller(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin_data, uint16_t GPIO_Pin_clock){
 	dataPIN=GPIO_Pin_data;clockPIN=GPIO_Pin_clock;
 	this->GPIOx=GPIOx;
 
@@ -56,7 +54,7 @@ LEDController::LEDController(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin_data, uint16
 
 }
 
-bool LEDController::setRGB(
+bool P9813Controller::setRGB(
 	uint8_t r,
 	uint8_t g,
 	uint8_t b

@@ -13,7 +13,7 @@ uint16_t _clockPIN;
 uint32_t _bgr;
 uint32_t _sequence;
 
-void _LEDController__send32bitSequence(uint32_t sequence){
+void _P9813Controller__send32bitSequence(uint32_t sequence){
     for(int8_t i=31;i>=0;i--){
 
 		HAL_GPIO_WritePin(_GPIOx, _dataPIN, ((sequence>>i)&1)?GPIO_PIN_SET:GPIO_PIN_RESET);//fetch and write next bit from sequence
@@ -26,7 +26,7 @@ void _LEDController__send32bitSequence(uint32_t sequence){
 	}
 }
 
-void _LEDController__writeColor(){
+void _P9813Controller__writeColor(){
 
 	//this is what the protocol of the p9813 requires:
 	_bgr=(_b<<16)|(_g<<8)|_r;
@@ -38,12 +38,12 @@ void _LEDController__writeColor(){
 
 
 
-	_LEDController__send32bitSequence(0);               //start Data
-	_LEDController__send32bitSequence(_sequence);
-	_LEDController__send32bitSequence(0);               //end Data
+	_P9813Controller__send32bitSequence(0);               //start Data
+	_P9813Controller__send32bitSequence(_sequence);
+	_P9813Controller__send32bitSequence(0);               //end Data
 }
 
-void LEDController__initialize(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin_data, uint16_t GPIO_Pin_clock){
+void P9813Controller__initialize(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin_data, uint16_t GPIO_Pin_clock){
 	_dataPIN=GPIO_Pin_data;_clockPIN=GPIO_Pin_clock;_GPIOx=GPIOx;
 
 
@@ -64,12 +64,12 @@ void LEDController__initialize(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin_data, uint
 
 }
 
-int LEDController__setRGB(
+int P9813Controller__setRGB(
 	uint8_t r,
 	uint8_t g,
 	uint8_t b
 ){
 	_r=r;_g=g;_b=b;
-	_LEDController__writeColor();
+	_P9813Controller__writeColor();
 	return SUCCESS;
 }

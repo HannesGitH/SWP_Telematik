@@ -5,7 +5,7 @@ extern "C"{
 #include "stm32l5xx_nucleo.h"
 }
 
-class LEDController{
+class P9813Controller{
   private:
     uint8_t r;
     uint8_t g;
@@ -28,10 +28,10 @@ class LEDController{
       * @param  GPIOx where x can be (A..H) to select the GPIO peripheral for STM32L5 family
       * @param  GPIO_Pin_data specifies the pin to the p9813 data line
       * @param  GPIO_Pin_clock specifies the pin to the p9813 clock line
-      * @retval LEDController
+      * @retval P9813Controller
       */
-    LEDController(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin_data, uint16_t GPIO_Pin_clock);
-    ~LEDController(){}
+    P9813Controller(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin_data, uint16_t GPIO_Pin_clock);
+    ~P9813Controller(){}
 
     /**
       * @brief  Set an RGB color value to the RGB-Strip

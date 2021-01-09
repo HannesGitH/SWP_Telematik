@@ -23,7 +23,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-#include "thread1.h"
+#include "LEDThread.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

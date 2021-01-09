@@ -40,7 +40,12 @@
 		<link>
 			<name>ProjektDateien/LEDController.cpp</name>
 			<type>1</type>
-			<location>$%7BPARENT-2-PROJECT_LOC%7D/NonSecure/Src/LEDController.cpp</location>
+			<locationURI>$%257BPARENT-2-PROJECT_LOC%257D/NonSecure/Src/LEDController.cpp</locationURI>
+		</link>
+		<link>
+			<name>ProjektDateien/LEDThread.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/NonSecure/Src/thread1.cpp</locationURI>
 		</link>
 		<link>
 			<name>ProjektDateien/d_p9813controller.c</name>
@@ -51,11 +56,6 @@
 			<name>ProjektDateien/p9813controller.cpp</name>
 			<type>1</type>
 			<locationURI>$%257BPARENT-2-PROJECT_LOC%257D/NonSecure/Src/p9813controller.cpp</locationURI>
-		</link>
-		<link>
-			<name>ProjektDateien/thread1.cpp</name>
-			<type>1</type>
-			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/NonSecure/Src/thread1.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/app_freertos.c</name>

@@ -1,7 +1,6 @@
 #include "p9813controller.hpp"
 
 extern "C"{
-#include "constant.h"
 #include "stm32l5xx_nucleo.h"
 }
 

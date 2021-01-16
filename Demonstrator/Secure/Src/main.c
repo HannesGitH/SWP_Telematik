@@ -23,6 +23,7 @@
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
 
+  #include "CtoCpp_callable.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -119,8 +120,10 @@ int main(void)
 
   /* Leave the GPIO clocks enabled to let non-secure having I/Os control */
 
-  /* Initialize PC.07 to drive external LED (LED1) */
-  BSP_LED_Init(LED1);
+  /* Initialize LEDController */
+  
+  #include "CtoCpp_callable.h"
+  initLEDController_default();
 
   /* Secure SysTick should rather be suspended before calling non-secure  */
   /* in order to avoid wake-up from sleep mode entered by non-secure      */

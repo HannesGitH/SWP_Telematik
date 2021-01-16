@@ -2,7 +2,8 @@
 #define SecureLEDController_HPP
 
 extern "C"{
-#include "stm32l5xx_nucleo.h"
+  #include "stm32l5xx_nucleo.h"
+  #include "CtoCpp_callable.h"
 }
 #include "p9813controller.hpp"
 
@@ -27,6 +28,7 @@ class SecureLEDController{
       P9813Controller p9813controller;
 
       void writeColor();
+      void configureP9813AsSecure(P9813DATA p9813data);
 
   public:
     /**
@@ -37,6 +39,7 @@ class SecureLEDController{
     SecureLEDController(P9813DATA p9813data);
     SecureLEDController(LEDPINDATA led_pins);
     SecureLEDController(P9813DATA p9813data,LEDPINDATA led_pins);
+    SecureLEDController(){}
     ~SecureLEDController(){}
 
     /**

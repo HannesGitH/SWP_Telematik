@@ -66,21 +66,9 @@ CMSE_NS_ENTRY void SECURE_RegisterCallback(SECURE_CallbackIDTypeDef CallbackId, 
   }
 }
 
-/**
-  * @brief  Secure treatment of non-secure push button interrupt.
-  * @retval None
-  */
-/*CMSE_NS_ENTRY*/secureportNON_SECURE_CALLABLE void SECURE_LEDToggle(void)
-{
-  BSP_LED_Toggle(LED1);
+void LEDS_setGreen(uint8_t brightness){
+    
 }
 
-/**
-  * @}
-  */
-
-/**
-  * @}
-  */
 /* USER CODE END Non_Secure_CallLib */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

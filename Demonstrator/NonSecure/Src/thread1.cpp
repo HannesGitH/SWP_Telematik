@@ -9,9 +9,9 @@ extern "C" int runThread1() {
 
 	for (;;) {
 		osDelay(100);
-		LEDS_setGreen(55);
+		SECURE_LEDS_setGreen(255);
 		osDelay(100);
-		LEDS_setGreen(55);
+		SECURE_LEDS_setGreen(55);
 	}
 
 return 0;

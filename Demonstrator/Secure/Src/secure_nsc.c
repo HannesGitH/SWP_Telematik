@@ -67,7 +67,7 @@ CMSE_NS_ENTRY void SECURE_RegisterCallback(SECURE_CallbackIDTypeDef CallbackId, 
   }
 }
 
-secureportNON_SECURE_CALLABLE void LEDS_setGreen(uint8_t brightness){
+secureportNON_SECURE_CALLABLE void SECURE_LEDS_setGreen(uint8_t brightness){
 	//BSP_LED_Init(LED2);
     //struct RGB currentColor = LEDController_getColor();
     //uint8_t r = currentColor.r;
@@ -75,7 +75,6 @@ secureportNON_SECURE_CALLABLE void LEDS_setGreen(uint8_t brightness){
     //uint8_t b = currentColor.b;
     //LEDController_setColor(r, brightness, brightness);
     //BSP_LED_Toggle(LED2);
-    return;
 }
 /*CMSE_NS_ENTRY*/secureportNON_SECURE_CALLABLE void SECURE_LEDToggle(void)
 {

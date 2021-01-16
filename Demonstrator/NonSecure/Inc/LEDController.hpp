@@ -1,5 +1,5 @@
-#ifndef LEDCONTROLLER_HPP
-#define LEDCONTROLLER_HPP
+#ifndef SecureLEDController_HPP
+#define SecureLEDController_HPP
 
 extern "C"{
 #include "stm32l5xx_nucleo.h"
@@ -17,7 +17,7 @@ struct LEDPINDATA {
 
 enum LEDTYPE { p9813, onBoard, both };
 
-class LEDController{
+class SecureLEDController{
   private:
       LEDTYPE type;
       uint8_t r;
@@ -32,12 +32,12 @@ class LEDController{
     /**
       * @brief  create LED Strip and onBoard Controller
       * @note   ----
-      * @retval LEDController
+      * @retval SecureLEDController
       */
-    LEDController(P9813DATA p9813data);
-    LEDController(LEDPINDATA led_pins);
-    LEDController(P9813DATA p9813data,LEDPINDATA led_pins);
-    ~LEDController(){}
+    SecureLEDController(P9813DATA p9813data);
+    SecureLEDController(LEDPINDATA led_pins);
+    SecureLEDController(P9813DATA p9813data,LEDPINDATA led_pins);
+    ~SecureLEDController(){}
 
     /**
       * @brief  Set an RGB color value to the RGB-Strip

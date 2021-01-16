@@ -4776,9 +4776,9 @@ LOAD c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
  .text.SECURE_RegisterCallback
                 0x000000000c00063c       0xac Application/User/secure_nsc.o
                 0x000000000c00063c                __acle_se_SECURE_RegisterCallback
- .text.SECURE_LEDToggle
+ .text.SECURE_LEDToggle2
                 0x000000000c0006e8       0x7a Application/User/secure_nsc.o
-                0x000000000c0006e8                __acle_se_SECURE_LEDToggle
+                0x000000000c0006e8                __acle_se_SECURE_LEDToggle2
  *fill*         0x000000000c000762        0x2 
  .text.HAL_MspInit
                 0x000000000c000764       0x70 Application/User/stm32l5xx_hal_msp.o
@@ -5051,10 +5051,10 @@ LOAD c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
                 0x000000000c03e000                SecureInit_DePrioritizeNSExceptions
                 0x000000000c03e008                SECURE_SystemCoreClockUpdate
                 0x000000000c03e010                SecureContext_AllocateContext
-                0x000000000c03e018                SECURE_LEDToggle
-                0x000000000c03e020                SecureContext_Init
-                0x000000000c03e028                SecureContext_LoadContext
-                0x000000000c03e030                SECURE_RegisterCallback
+                0x000000000c03e018                SecureContext_Init
+                0x000000000c03e020                SecureContext_LoadContext
+                0x000000000c03e028                SECURE_RegisterCallback
+                0x000000000c03e030                SECURE_LEDToggle2
                 0x000000000c03e038                SecureContext_SaveContext
                 0x000000000c03e040                SecureInit_EnableNSFPUAccess
                 0x000000000c03e048                SecureContext_FreeContext
@@ -5220,31 +5220,31 @@ OUTPUT(Demonstrator_Secure.elf elf32-littlearm)
  .debug_aranges
                 0x0000000000000620      0x1b8 Drivers/HAL/stm32l5xx_hal_pwr_ex.o
 
-.debug_str      0x0000000000000000   0x10a4b0
+.debug_str      0x0000000000000000   0x10a4b1
  .debug_str     0x0000000000000000       0x9d Application/Startup/startup_stm32l552zetxq.o
  .debug_str     0x000000000000009d   0x106a37 Application/User/main.o
                                      0x106e4a (size before relaxing)
- .debug_str     0x0000000000106ad4      0x754 Application/User/secure_nsc.o
-                                     0x1070c3 (size before relaxing)
- .debug_str     0x0000000000107228      0x636 Application/User/stm32l5xx_hal_msp.o
+ .debug_str     0x0000000000106ad4      0x755 Application/User/secure_nsc.o
+                                     0x1070c4 (size before relaxing)
+ .debug_str     0x0000000000107229      0x636 Application/User/stm32l5xx_hal_msp.o
                                      0x10309f (size before relaxing)
- .debug_str     0x000000000010785e      0x121 Application/User/stm32l5xx_it.o
+ .debug_str     0x000000000010785f      0x121 Application/User/stm32l5xx_it.o
                                      0x1029e4 (size before relaxing)
- .debug_str     0x000000000010797f      0x4f9 Drivers/BSP/stm32l5xx_nucleo.o
+ .debug_str     0x0000000000107980      0x4f9 Drivers/BSP/stm32l5xx_nucleo.o
                                      0x103576 (size before relaxing)
- .debug_str     0x0000000000107e78      0x6fd Drivers/CMSIS/system_stm32l5xx_s.o
+ .debug_str     0x0000000000107e79      0x6fd Drivers/CMSIS/system_stm32l5xx_s.o
                                      0x10243a (size before relaxing)
- .debug_str     0x0000000000108575      0x586 Drivers/HAL/stm32l5xx_hal.o
+ .debug_str     0x0000000000108576      0x586 Drivers/HAL/stm32l5xx_hal.o
                                      0x102897 (size before relaxing)
- .debug_str     0x0000000000108afb      0x284 Drivers/HAL/stm32l5xx_hal_cortex.o
+ .debug_str     0x0000000000108afc      0x284 Drivers/HAL/stm32l5xx_hal_cortex.o
                                      0x102565 (size before relaxing)
- .debug_str     0x0000000000108d7f      0x30b Drivers/HAL/stm32l5xx_hal_gpio.o
+ .debug_str     0x0000000000108d80      0x30b Drivers/HAL/stm32l5xx_hal_gpio.o
                                      0x101e60 (size before relaxing)
- .debug_str     0x000000000010908a      0x995 Drivers/HAL/stm32l5xx_hal_gtzc.o
+ .debug_str     0x000000000010908b      0x995 Drivers/HAL/stm32l5xx_hal_gtzc.o
                                      0x10253b (size before relaxing)
- .debug_str     0x0000000000109a1f      0x326 Drivers/HAL/stm32l5xx_hal_icache.o
+ .debug_str     0x0000000000109a20      0x326 Drivers/HAL/stm32l5xx_hal_icache.o
                                      0x101dfd (size before relaxing)
- .debug_str     0x0000000000109d45      0x76b Drivers/HAL/stm32l5xx_hal_pwr_ex.o
+ .debug_str     0x0000000000109d46      0x76b Drivers/HAL/stm32l5xx_hal_pwr_ex.o
                                      0x102505 (size before relaxing)
 
 .debug_ranges   0x0000000000000000      0x710

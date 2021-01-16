@@ -15,7 +15,7 @@ void SecureLEDController::writeColor(){
         }else{
             BSP_LED_Off(LED3);
         }
-        if(b>127){
+        if(g>127){
 			BSP_LED_On(LED2);
 		}else{
 			BSP_LED_Off(LED2);
@@ -66,6 +66,7 @@ bool SecureLEDController::setRGB(
 
 void SecureLEDController::configureP9813AsSecure(P9813DATA p9813data){
   	HAL_GPIO_ConfigPinAttributes(p9813data.GPIOx, (GPIO_PIN_All & ~(p9813data.GPIO_Pin_data) & ~(p9813data.GPIO_Pin_clock)), GPIO_PIN_NSEC);
+	return;
 }
 
 
@@ -84,6 +85,7 @@ void initLEDController(
 ){
 	P9813DATA p9813data = {GPIOx, GPIO_Pin_data, GPIO_Pin_clock};
 	ledc = SecureLEDController(p9813data);
+	return;
 }
 void initLEDController_default(){
 	P9813DATA p9813data = {GPIOD, GPIO_PIN_6, GPIO_PIN_7};
@@ -96,6 +98,7 @@ void LEDController_setColor(
     uint8_t b
 ){
 	ledc.setRGB(r,g,b);
+	return;
 }
 RGB LEDController_getColor(){
 	return ledc.getRGB();

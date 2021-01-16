@@ -67,12 +67,15 @@ CMSE_NS_ENTRY void SECURE_RegisterCallback(SECURE_CallbackIDTypeDef CallbackId, 
   }
 }
 
-void LEDS_setGreen(uint8_t brightness){
-    struct RGB currentColor = LEDController_getColor();
-    uint8_t r = currentColor.r;
-    uint8_t g = currentColor.g;
-    uint8_t b = currentColor.b;
-    LEDController_setColor(r, brightness, b);
+secureportNON_SECURE_CALLABLE void LEDS_setGreen(uint8_t brightness){
+	//BSP_LED_Init(LED2);
+    //struct RGB currentColor = LEDController_getColor();
+    //uint8_t r = currentColor.r;
+    //uint8_t g = currentColor.g;
+    //uint8_t b = currentColor.b;
+    //LEDController_setColor(r, brightness, brightness);
+    //BSP_LED_Toggle(LED2);
+    return;
 }
 
 /* USER CODE END Non_Secure_CallLib */

@@ -38,7 +38,6 @@ typedef enum
 /* Exported macro ------------------------------------------------------------*/
 /* Exported functions ------------------------------------------------------- */
 void SECURE_RegisterCallback(SECURE_CallbackIDTypeDef CallbackId, void *func);
-void SECURE_LEDToggle(void);
 
 void LEDS_setGreen(uint8_t brightness);
 

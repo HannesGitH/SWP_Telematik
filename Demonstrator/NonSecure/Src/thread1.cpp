@@ -1,18 +1,17 @@
 extern "C" {
 #include "cmsis_os.h"
 #include "thread1.h"
+#include "secure_nsc.h"
 }
 //#include "LEDController.hpp"
 
 extern "C" int runThread1() {
 
-	//P9813DATA p9813data = {GPIOD, GPIO_PIN_6, GPIO_PIN_7};
-	//SecureLEDController ledC(p9813data,LEDPINDATA{});
 	for (;;) {
 		osDelay(100);
-		//ledC.setRGB(0, 0, 0);
-		osDelay(1000);
-		//ledC.setRGB(255, 255, 255);
+		LEDS_setGreen(200);
+		osDelay(100);
+		LEDS_setGreen(55);
 	}
 
 return 0;

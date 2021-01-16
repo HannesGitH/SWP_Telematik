@@ -13,5 +13,14 @@ void LEDController_setColor(
     uint8_t g,
     uint8_t b
 );
+struct RGB LEDController_getColor();
+
+struct RGB
+{
+    uint8_t r;
+    uint8_t g;
+    uint8_t b;
+};
+
 
 #endif

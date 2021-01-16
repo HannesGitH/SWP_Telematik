@@ -22,6 +22,7 @@
 #include "secure_nsc.h"
 #include <stdio.h>
 #include "secure_port_macros.h"  
+#include "CtoCpp_callable.h"
 /** @addtogroup STM32L5xx_HAL_Examples
   * @{
   */
@@ -67,7 +68,11 @@ CMSE_NS_ENTRY void SECURE_RegisterCallback(SECURE_CallbackIDTypeDef CallbackId, 
 }
 
 void LEDS_setGreen(uint8_t brightness){
-    
+    struct RGB currentColor = LEDController_getColor();
+    uint8_t r = currentColor.r;
+    uint8_t g = currentColor.g;
+    uint8_t b = currentColor.b;
+    LEDController_setColor(r, brightness, b);
 }
 
 /* USER CODE END Non_Secure_CallLib */

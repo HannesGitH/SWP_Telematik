@@ -21,9 +21,9 @@ enum LEDTYPE { p9813, onBoard, both };
 class SecureLEDController{
   private:
       LEDTYPE type;
-      uint8_t r;
-      uint8_t g;
-      uint8_t b;
+      uint8_t r = 0;
+      uint8_t g = 0;
+      uint8_t b = 0;
 
       P9813Controller p9813controller;
 
@@ -55,6 +55,8 @@ class SecureLEDController{
       uint8_t g,
       uint8_t b
     );
+    bool setRGB(RGB);
+    RGB getRGB(){return {r,g,b};}
 };
 
 #endif

@@ -50,6 +50,9 @@ SecureLEDController::SecureLEDController(P9813DATA p9813data,LEDPINDATA led_pins
 		BSP_LED_Init(LED1);
     type=both;
 }
+bool SecureLEDController::setRGB(RGB rgb){
+	return setRGB(rgb.r,rgb.g,rgb.b);
+}
 
 bool SecureLEDController::setRGB(
 	uint8_t r,
@@ -93,6 +96,9 @@ void LEDController_setColor(
     uint8_t b
 ){
 	ledc.setRGB(r,g,b);
+}
+RGB LEDController_getColor(){
+	return ledc.getRGB();
 }
 
 }

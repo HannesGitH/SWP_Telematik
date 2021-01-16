@@ -77,6 +77,10 @@ secureportNON_SECURE_CALLABLE void LEDS_setGreen(uint8_t brightness){
     //BSP_LED_Toggle(LED2);
     return;
 }
+/*CMSE_NS_ENTRY*/secureportNON_SECURE_CALLABLE void SECURE_LEDToggle(void)
+{
+  BSP_LED_Toggle(LED1);
+}
 
 /* USER CODE END Non_Secure_CallLib */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

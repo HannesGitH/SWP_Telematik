@@ -9,7 +9,7 @@ extern "C" int runThread1() {
 
 	for (;;) {
 		osDelay(100);
-		SECURE_LEDToggle();
+		LEDS_setGreen(55);
 		osDelay(100);
 		LEDS_setGreen(55);
 	}

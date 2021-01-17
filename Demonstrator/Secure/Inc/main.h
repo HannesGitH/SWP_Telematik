@@ -39,6 +39,7 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "stm32l5xx_nucleo.h"
+#include "CtoCpp_callable.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

@@ -22,6 +22,7 @@
 #include "secure_nsc.h"
 #include <stdio.h>
 #include "secure_port_macros.h"  
+#include "CtoCpp_callable.h"
 /** @addtogroup STM32L5xx_HAL_Examples
   * @{
   */
@@ -66,21 +67,21 @@ CMSE_NS_ENTRY void SECURE_RegisterCallback(SECURE_CallbackIDTypeDef CallbackId, 
   }
 }
 
-/**
-  * @brief  Secure treatment of non-secure push button interrupt.
-  * @retval None
-  */
+secureportNON_SECURE_CALLABLE void SECURE_LEDS_setGreen(uint8_t brightness){
+	//BSP_LED_Init(LED2);
+	HAL_ResumeTick();
+    struct RGB currentColor = LEDController_getColor();
+    uint8_t r = currentColor.r;
+    uint8_t g = currentColor.g;
+    uint8_t b = currentColor.b;
+    LEDController_setColor(r, brightness, b);
+    HAL_SuspendTick();
+    //BSP_LED_Toggle(LED2);
+}
 /*CMSE_NS_ENTRY*/secureportNON_SECURE_CALLABLE void SECURE_LEDToggle(void)
 {
   BSP_LED_Toggle(LED1);
 }
 
-/**
-  * @}
-  */
-
-/**
-  * @}
-  */
 /* USER CODE END Non_Secure_CallLib */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

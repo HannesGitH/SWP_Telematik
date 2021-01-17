@@ -23,6 +23,7 @@
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
 
+  #include "CtoCpp_callable.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -99,7 +100,7 @@ int main(void)
      */
 
   /* All IOs are by default allocated to secure */
-  /* Release them all to non-secure except PC.07 (LED1) kept as secure */
+  /* Release them all to non-secure */
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOC_CLK_ENABLE();
@@ -110,7 +111,7 @@ int main(void)
   __HAL_RCC_GPIOH_CLK_ENABLE();
   HAL_GPIO_ConfigPinAttributes(GPIOA, GPIO_PIN_All, GPIO_PIN_NSEC);
   HAL_GPIO_ConfigPinAttributes(GPIOB, GPIO_PIN_All, GPIO_PIN_NSEC);
-  HAL_GPIO_ConfigPinAttributes(GPIOC, (GPIO_PIN_All & ~(GPIO_PIN_7)), GPIO_PIN_NSEC);
+  HAL_GPIO_ConfigPinAttributes(GPIOC, GPIO_PIN_All, GPIO_PIN_NSEC);
   HAL_GPIO_ConfigPinAttributes(GPIOD, GPIO_PIN_All, GPIO_PIN_NSEC);
   HAL_GPIO_ConfigPinAttributes(GPIOE, GPIO_PIN_All, GPIO_PIN_NSEC);
   HAL_GPIO_ConfigPinAttributes(GPIOF, GPIO_PIN_All, GPIO_PIN_NSEC);
@@ -119,8 +120,10 @@ int main(void)
 
   /* Leave the GPIO clocks enabled to let non-secure having I/Os control */
 
-  /* Initialize PC.07 to drive external LED (LED1) */
-  BSP_LED_Init(LED1);
+  /* Initialize LEDController */
+  
+  #include "CtoCpp_callable.h"
+  initLEDController_default();
 
   /* Secure SysTick should rather be suspended before calling non-secure  */
   /* in order to avoid wake-up from sleep mode entered by non-secure      */

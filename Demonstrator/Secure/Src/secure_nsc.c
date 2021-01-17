@@ -74,7 +74,7 @@ secureportNON_SECURE_CALLABLE void SECURE_LEDS_setGreen(uint8_t brightness){
     uint8_t r = currentColor.r;
     uint8_t g = currentColor.g;
     uint8_t b = currentColor.b;
-    LEDController_setColor(r, brightness, brightness);
+    LEDController_setColor(r, brightness, b);
     HAL_SuspendTick();
     //BSP_LED_Toggle(LED2);
 }

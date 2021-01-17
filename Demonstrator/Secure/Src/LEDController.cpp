@@ -16,14 +16,14 @@ void SecureLEDController::writeColor(){
             BSP_LED_Off(LED3);
         }
         if(g>127){
-			BSP_LED_On(LED2);
-		}else{
-			BSP_LED_Off(LED2);
-		}
-        if(b>127){
 			BSP_LED_On(LED1);
 		}else{
 			BSP_LED_Off(LED1);
+		}
+        if(b>127){
+			BSP_LED_On(LED2);
+		}else{
+			BSP_LED_Off(LED2);
 		}
         
     }

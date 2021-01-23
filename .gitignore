@@ -1,16 +1,16 @@
 # build and compiled files
-**.o
-**.d
-**.su
-**makefile
-**.mk
-**.list
-**.launch
-**.bin
+*.o
+*.d
+*.su
+*makefile
+*.mk
+*.list
+*.launch
+*.bin
 *.elf
 *.map
-**.o
-**.scratch
+*.o
+*.scratch
 
 # preferences
 **/.settings

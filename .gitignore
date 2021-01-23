@@ -7,11 +7,10 @@
 **.list
 **.launch
 **.bin
-**.elf
-**.map
+*.elf
+*.map
 **.o
 **.scratch
 
 # preferences
-**/.settings/
-**.settings.xml
+**/.settings

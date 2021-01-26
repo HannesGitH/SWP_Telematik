@@ -35,19 +35,13 @@ SecureLEDController::SecureLEDController(P9813DATA p9813data){
     type=p9813;
 }
 SecureLEDController::SecureLEDController(LEDPINDATA led_pins){
-	//TODO
-		BSP_LED_Init(LED3);
-		BSP_LED_Init(LED2);
-		BSP_LED_Init(LED1);
+	configureNormalLEDsAsSecure(led_pins);
     type=onBoard;
 }
 SecureLEDController::SecureLEDController(P9813DATA p9813data,LEDPINDATA led_pins){
 	configureP9813AsSecure(p9813data);
 	p9813controller=P9813Controller(p9813data.GPIOx,p9813data.GPIO_Pin_data,p9813data.GPIO_Pin_clock);
-	//TODO
-		BSP_LED_Init(LED3);
-		BSP_LED_Init(LED2);
-		BSP_LED_Init(LED1);
+	configureNormalLEDsAsSecure(led_pins);
     type=both;
 }
 bool SecureLEDController::setRGB(RGB rgb){
@@ -68,6 +62,26 @@ void SecureLEDController::configureP9813AsSecure(P9813DATA p9813data){
   	HAL_GPIO_ConfigPinAttributes(p9813data.GPIOx, (GPIO_PIN_All & ~(p9813data.GPIO_Pin_data) & ~(p9813data.GPIO_Pin_clock)), GPIO_PIN_NSEC);
 	return;
 }
+void SecureLEDController::configureNormalLEDsAsSecure(LEDPINDATA pindata){
+	//config pins as secure
+  	HAL_GPIO_ConfigPinAttributes(pindata.GPIOx_R, (GPIO_PIN_All & ~(pindata.GPIO_Pin_Red) & ~(pindata.GPIO_Pin_Green) & ~(pindata.GPIO_Pin_Blue)), GPIO_PIN_NSEC);
+	//init pins
+	GPIO_InitTypeDef GPIO_Init;
+  	GPIO_Init.Mode  = GPIO_MODE_OUTPUT_PP;
+	GPIO_Init.Pull  = GPIO_PULLUP;
+	GPIO_Init.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+  	//init red pin
+  	  	GPIO_Init.Pin   = pindata.GPIO_Pin_Red;
+  		HAL_GPIO_Init(pindata.GPIOx_R, &GPIO_Init);
+  	//init red pin
+  	  	GPIO_Init.Pin   = pindata.GPIO_Pin_Green;
+  		HAL_GPIO_Init(pindataGPIOx_G, &GPIO_Init);
+  	//init red pin
+  	  	GPIO_Init.Pin   = pindata.GPIO_Pin_Blue;
+  		HAL_GPIO_Init(pindataGPIOx_B, &GPIO_Init);
+	
+	return;
+}
 
 
 
@@ -78,6 +92,7 @@ SecureLEDController ledc;
 
 extern "C" {
 
+//TODO with onboard
 void initLEDController(
     GPIO_TypeDef*   GPIOx, 
     uint16_t        GPIO_Pin_data,
@@ -89,6 +104,7 @@ void initLEDController(
 }
 void initLEDController_default(){
 	P9813DATA p9813data = {GPIOD, GPIO_PIN_6, GPIO_PIN_7};
+	LEDPINDATA led_pins = {GPIOC,GPIO_PIN_7, GPIOB,GPIO_PIN_7, GPIOA,GPIO_PIN_9 }
 	ledc = SecureLEDController(p9813data,LEDPINDATA{});
 }
 

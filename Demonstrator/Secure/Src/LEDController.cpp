@@ -59,12 +59,12 @@ bool SecureLEDController::setRGB(
 }
 
 void SecureLEDController::configureP9813AsSecure(P9813DATA p9813data){
-  	HAL_GPIO_ConfigPinAttributes(p9813data.GPIOx, (GPIO_PIN_All & ~(p9813data.GPIO_Pin_data) & ~(p9813data.GPIO_Pin_clock)), GPIO_PIN_NSEC);
+  	HAL_GPIO_ConfigPinAttributes(p9813data.GPIOx, ((p9813data.GPIO_Pin_data) & (p9813data.GPIO_Pin_clock)), GPIO_PIN_SEC);
 	return;
 }
 void SecureLEDController::configureNormalLEDsAsSecure(LEDPINDATA pindata){
 	//config pins as secure
-  	HAL_GPIO_ConfigPinAttributes(pindata.GPIOx_R, (GPIO_PIN_All & ~(pindata.GPIO_Pin_Red) & ~(pindata.GPIO_Pin_Green) & ~(pindata.GPIO_Pin_Blue)), GPIO_PIN_NSEC);
+  	HAL_GPIO_ConfigPinAttributes(pindata.GPIOx_R,  ((pindata.GPIO_Pin_Red) & (pindata.GPIO_Pin_Green) & (pindata.GPIO_Pin_Blue)), GPIO_PIN_SEC);
 	//init pins
 	GPIO_InitTypeDef GPIO_Init;
   	GPIO_Init.Mode  = GPIO_MODE_OUTPUT_PP;
@@ -75,10 +75,10 @@ void SecureLEDController::configureNormalLEDsAsSecure(LEDPINDATA pindata){
   		HAL_GPIO_Init(pindata.GPIOx_R, &GPIO_Init);
   	//init red pin
   	  	GPIO_Init.Pin   = pindata.GPIO_Pin_Green;
-  		HAL_GPIO_Init(pindataGPIOx_G, &GPIO_Init);
+  		HAL_GPIO_Init(pindata.GPIOx_G, &GPIO_Init);
   	//init red pin
   	  	GPIO_Init.Pin   = pindata.GPIO_Pin_Blue;
-  		HAL_GPIO_Init(pindataGPIOx_B, &GPIO_Init);
+  		HAL_GPIO_Init(pindata.GPIOx_B, &GPIO_Init);
 	
 	return;
 }
@@ -104,8 +104,8 @@ void initLEDController(
 }
 void initLEDController_default(){
 	P9813DATA p9813data = {GPIOD, GPIO_PIN_6, GPIO_PIN_7};
-	LEDPINDATA led_pins = {GPIOC,GPIO_PIN_7, GPIOB,GPIO_PIN_7, GPIOA,GPIO_PIN_9 }
-	ledc = SecureLEDController(p9813data,LEDPINDATA{});
+	LEDPINDATA led_pins = {GPIOC,GPIO_PIN_7, GPIOB,GPIO_PIN_7, GPIOA,GPIO_PIN_9 };
+	ledc = SecureLEDController(p9813data,led_pins);
 }
 
 void LEDController_setColor(

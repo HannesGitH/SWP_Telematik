@@ -13,7 +13,14 @@ struct P9813DATA {
     uint16_t GPIO_Pin_clock;
 };
 struct LEDPINDATA {
-    //TODO
+    GPIO_TypeDef *GPIOx_R;
+    uint16_t GPIO_Pin_Red;
+
+    GPIO_TypeDef *GPIOx_G;
+    uint16_t GPIO_Pin_Green;
+
+    GPIO_TypeDef *GPIOx_B;
+    uint16_t GPIO_Pin_Blue; 
 };
 
 enum LEDTYPE { p9813, onBoard, both };
@@ -29,6 +36,7 @@ class SecureLEDController{
 
       void writeColor();
       void configureP9813AsSecure(P9813DATA p9813data);
+      void configureNormalLEDsAsSecure(LEDPINDATA pindata);
 
   public:
     /**

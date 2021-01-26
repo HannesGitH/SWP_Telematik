@@ -46,7 +46,7 @@ osThreadId_t defaultTaskHandle;
 const osThreadAttr_t defaultTask_attributes = {
   .name = "defaultTask",
   .priority = (osPriority_t) osPriorityNormal,
-  .stack_size = 128
+  .stack_size = 512
 };
 /* Definitions for Thread1 */
 osThreadId_t Thread1Handle;

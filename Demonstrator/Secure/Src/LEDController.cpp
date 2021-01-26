@@ -64,7 +64,9 @@ void SecureLEDController::configureP9813AsSecure(P9813DATA p9813data){
 }
 void SecureLEDController::configureNormalLEDsAsSecure(LEDPINDATA pindata){
 	//config pins as secure
-  	HAL_GPIO_ConfigPinAttributes(pindata.GPIOx_R,  ((pindata.GPIO_Pin_Red) & (pindata.GPIO_Pin_Green) & (pindata.GPIO_Pin_Blue)), GPIO_PIN_SEC);
+  	HAL_GPIO_ConfigPinAttributes(pindata.GPIOx_R,  pindata.GPIO_Pin_Red, GPIO_PIN_SEC);
+	HAL_GPIO_ConfigPinAttributes(pindata.GPIOx_G,  pindata.GPIO_Pin_Green, GPIO_PIN_SEC);
+	HAL_GPIO_ConfigPinAttributes(pindata.GPIOx_B,  pindata.GPIO_Pin_Blue, GPIO_PIN_SEC);
 	//init pins
 	GPIO_InitTypeDef GPIO_Init;
   	GPIO_Init.Mode  = GPIO_MODE_OUTPUT_PP;
@@ -103,8 +105,8 @@ void initLEDController(
 	return;
 }
 void initLEDController_default(){
-	P9813DATA p9813data = {GPIOD, GPIO_PIN_6, GPIO_PIN_7};
-	LEDPINDATA led_pins = {GPIOC,GPIO_PIN_7, GPIOB,GPIO_PIN_7, GPIOA,GPIO_PIN_9 };
+	P9813DATA p9813data = {GPIOD, GPIO_PIN_6, GPIO_PIN_7}; //my current setup
+	LEDPINDATA led_pins = {GPIOC,GPIO_PIN_7, GPIOB,GPIO_PIN_7, GPIOA,GPIO_PIN_9 }; //onboard leds
 	ledc = SecureLEDController(p9813data,led_pins);
 }
 

@@ -75,6 +75,7 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define LEDS_FULL_BRIGHTNESS 255
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

@@ -23,6 +23,7 @@
 #include <stdio.h>
 #include "secure_port_macros.h"  
 #include "CtoCpp_callable.h"
+
 /** @addtogroup STM32L5xx_HAL_Examples
   * @{
   */
@@ -78,9 +79,9 @@ secureportNON_SECURE_CALLABLE void SECURE_LEDS_setGreen(uint8_t brightness){
     HAL_SuspendTick();
     //BSP_LED_Toggle(LED2);
 }
-/*CMSE_NS_ENTRY*/secureportNON_SECURE_CALLABLE void SECURE_LEDToggle(void)
+/*CMSE_NS_ENTRY*/secureportNON_SECURE_CALLABLE void SECURE_LEDToggle(Led_TypeDef LED)
 {
-  BSP_LED_Toggle(LED1);
+  BSP_LED_Toggle(LED);
 }
 
 /* USER CODE END Non_Secure_CallLib */

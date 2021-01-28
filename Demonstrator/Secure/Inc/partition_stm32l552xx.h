@@ -389,7 +389,7 @@
 //   <o.21> EXTI10_IRQn         <0=> Secure state
 //   <o.22> EXTI11_IRQn         <0=> Secure state
 //   <o.23> EXTI12_IRQn         <0=> Secure state
-//   <o.24> EXTI13_IRQn         <0=> Secure state
+//   <o.24> EXTI13_IRQn         <1=> Non-Secure state
 //   <o.25> EXTI14_IRQn         <0=> Secure state
 //   <o.26> EXTI15_IRQn         <0=> Secure state
 //   <o.27> DMAMUX1_IRQn        <0=> Secure state
@@ -399,7 +399,7 @@
 //   <o.31> DMA1_Channel3_IRQn  <0=> Secure state
 */
 
-#define NVIC_INIT_ITNS0_VAL      0x00000000
+#define NVIC_INIT_ITNS0_VAL      0x01000000
 /*
 //   </e>
 */

@@ -61,10 +61,12 @@ const osThreadAttr_t Thread1_attributes = {
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
 void StartDefaultTask(void *argument);
 void StartThread1(void *argument);
 
 /* USER CODE BEGIN PFP */
+void StartAttackTask(void* argument);
 void SecureFault_Callback(void);
 void SecureError_Callback(void);
 /* USER CODE END PFP */
@@ -106,6 +108,7 @@ int main(void)
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
+  MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
   /* Initialize PA.09 to drive external LED (LED3) */
   BSP_LED_Init(LED3);
@@ -208,7 +211,48 @@ void SystemClock_Config(void)
   }
 }
 
+/**
+  * @brief GPIO Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_GPIO_Init(void)
+{
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
+
+  /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOC_CLK_ENABLE();
+
+  /*Configure GPIO pin : PC13 */
+  GPIO_InitStruct.Pin = GPIO_PIN_13;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI13_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(EXTI13_IRQn);
+
+}
+
 /* USER CODE BEGIN 4 */
+void createAttack(){
+	osThreadId_t attackTaskHandle;
+	const osThreadAttr_t attackTask_attributes = {
+	  .name = "attackTask",
+	  .priority = (osPriority_t) osPriorityNormal,
+	  .stack_size = 512
+	};
+	attackTaskHandle = osThreadNew(StartAttackTask, NULL, &attackTask_attributes);
+}
+
+void StartAttackTask(void *argument){
+	portALLOCATE_SECURE_CONTEXT (configMINIMAL_SECURE_STACK_SIZE);
+	while(1){
+		SECURE_LEDToggle(LED_RED);
+		osDelay(1500);
+	}
+}
 /**
   * @brief  Callback called by secure code following a secure fault interrupt
   * @note   This callback is called by secure code thanks to the registration
@@ -255,7 +299,7 @@ void StartDefaultTask(void *argument)
   
   for (;;)
   {
-
+	SECURE_LEDToggle(LED_BLUE);
     osDelay(1000);
   }
   /* USER CODE END 5 */

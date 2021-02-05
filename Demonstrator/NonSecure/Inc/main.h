@@ -33,6 +33,7 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "stm32l5xx_nucleo.h"
+#include "secure_nansc.h" /* For export not actually Non-secure callable APIs */
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

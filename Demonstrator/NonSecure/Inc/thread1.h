@@ -4,6 +4,7 @@ extern "C" {
 #ifndef THREAD1_H
 #define THREAD1_H
 
+#include "main.h"
 #include "stm32l5xx_nucleo.h"
 #include "cmsis_os.h"
 #include "thread1.h"

@@ -56,6 +56,11 @@
 			<type>1</type>
 			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Secure/Src/secure_nsc.c</locationURI>
 		</link>
+			<link>
+			<name>Application/User/secure_nansc.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Secure/Src/secure_nansc.c</locationURI>
+		</link>
 		<link>
 			<name>Application/User/stm32l5xx_hal_msp.c</name>
 			<type>1</type>

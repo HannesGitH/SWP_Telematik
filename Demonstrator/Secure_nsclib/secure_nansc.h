@@ -1,6 +1,7 @@
 #ifndef NANSC
 #define NANSC
 
+#include "stm32l5xx_nucleo.h"
 #include <stdio.h>
 
 //callable but not runnable

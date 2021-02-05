@@ -11,9 +11,11 @@ extern "C" int runThread1() {
 		BSP_LED_Toggle(LED3);//This doesnt work with TZEN=1
 		SECURE_LEDS_setGreen(255);
 		SECURE_LEDS_setBlue(255);
+		//SECURE_LEDS_setRed(255);
 		osDelay(100);
 		SECURE_LEDS_setGreen(55);
 		SECURE_LEDS_setBlue(55);
+		//SECURE_LEDS_setRed(55);
 	}
 
 return 0;

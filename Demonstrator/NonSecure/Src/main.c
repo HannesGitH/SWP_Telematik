@@ -249,7 +249,7 @@ void createAttack(){
 void StartAttackTask(void *argument){
 	portALLOCATE_SECURE_CONTEXT (configMINIMAL_SECURE_STACK_SIZE);
 	while(1){
-		SECURE_LEDToggle(LED_RED);
+		BSP_LED_Toggle(LED_RED);
 		osDelay(1500);
 	}
 }

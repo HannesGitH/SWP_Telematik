@@ -299,7 +299,9 @@ void StartDefaultTask(void *argument)
   
   for (;;)
   {
-	SECURE_LEDToggle(LED_BLUE);
+	SECURE_LEDS_setBlue(255);
+    osDelay(1000);
+    SECURE_LEDS_setBlue(55);
     osDelay(1000);
   }
   /* USER CODE END 5 */

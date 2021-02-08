@@ -42,6 +42,8 @@ void SECURE_RegisterCallback(SECURE_CallbackIDTypeDef CallbackId, void *func);
 void SECURE_LEDToggle(Led_TypeDef LED);
 
 void SECURE_LEDS_setGreen(uint8_t brightness);
+void SECURE_LEDS_setRed(uint8_t brightness);
+void SECURE_LEDS_setBlue(uint8_t brightness);
 
 #endif /* SECURE_NSC_H */
 /* USER CODE END Non_Secure_CallLib_h */

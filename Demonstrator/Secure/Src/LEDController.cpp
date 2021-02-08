@@ -7,7 +7,7 @@ void SecureLEDController::writeColor(){
     if(type!=onBoard){
         p9813controller.setRGB(r,g,b);
     }
-    /*if(type!=p9813){
+    if(type!=p9813){
         //TODO make it actually work (pwm?)
         //this is just 4 debugging
         if(r>127){
@@ -26,7 +26,7 @@ void SecureLEDController::writeColor(){
 			BSP_LED_Off(LED2);
 		}
         
-    }*/
+    }
 }
 
 SecureLEDController::SecureLEDController(P9813DATA p9813data){

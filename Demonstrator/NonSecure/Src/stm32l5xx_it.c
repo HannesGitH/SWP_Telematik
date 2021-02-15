@@ -110,9 +110,9 @@ void EXTI13_IRQHandler(void)
   if(attack == 0){
 	  createAttack();
 	  ++attack;
-  }
+  }  
   /* USER CODE END EXTI13_IRQn 0 */
-  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_13);
+    HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_13);
   /* USER CODE BEGIN EXTI13_IRQn 1 */
 
   /* USER CODE END EXTI13_IRQn 1 */

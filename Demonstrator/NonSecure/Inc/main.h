@@ -54,11 +54,14 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-
+void createAttack(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
 #define LEDS_FULL_BRIGHTNESS 255
+#define User_Interrupt_Pin GPIO_PIN_13
+#define User_Interrupt_GPIO_Port GPIOC
+#define User_Interrupt_EXTI_IRQn EXTI13_IRQn
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

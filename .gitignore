@@ -11,6 +11,7 @@
 *.map
 *.o
 *.scratch
+*.mxproject
 
 # preferences
 **/.settings

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Demonstrator</name>
+	<name>withTZ</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -20,7 +20,7 @@
 		<link>
 			<name>Demonstrator.ioc</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/demonstrator.ioc</locationURI>
+			<locationURI>PROJECT_LOC/Demonstrator.ioc</locationURI>
 		</link>
 		<link>
 			<name>Doc/readme.md</name>

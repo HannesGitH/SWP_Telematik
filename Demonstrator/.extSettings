@@ -1,9 +1,0 @@
-[ProjectFiles]
-HeaderPath=..\..\Dependencies\Drivers\BSP;
-[Others]
-Define=
-HALModule=TIM;EXTI;UART
-[Groups]
-Doc=../readme.txt;
-Drivers/BSP=../../Dependencies/Drivers/BSP/stm32l5xx_nucleo.c;
-Drivers/HAL=../../Dependencies/Drivers/HAL/Src/stm32l5xx_hal_exti.c;../../Dependencies/Drivers/HAL/Src/stm32l5xx_hal_uart.c;../../Dependencies/Drivers/HAL/Src/stm32l5xx_hal_uart_ex.c;

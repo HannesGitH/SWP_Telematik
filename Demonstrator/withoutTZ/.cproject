@@ -46,6 +46,12 @@
 									<listOptionValue builtIn="false" value="../Core/Inc"/>
 									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Device/ST/STM32L5xx/Include"/>
 									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Include"/>
+									<listOptionValue builtIn="false" value="../../../Dependencies/FreeRTOS/Source/include"/>
+									<listOptionValue builtIn="false" value="../../../Dependencies/FreeRTOS/Source/CMSIS_RTOS_V2"/>
+									<listOptionValue builtIn="false" value="../../../Dependencies/FreeRTOS/Source/portable/GCC/ARM_CM33/non_secure"/>
+									<listOptionValue builtIn="false" value="../../../Dependencies/FreeRTOS/Source/portable/GCC/ARM_CM33/secure"/>
+									<listOptionValue builtIn="false" value="../../../../Dependencies/Drivers/CMSIS/Device/ST/STM32L5xx/Include"/>
+									<listOptionValue builtIn="false" value="../../../Dependencies/Drivers/BSP"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.1846330244" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -63,6 +69,12 @@
 									<listOptionValue builtIn="false" value="&quot;../../../Dependencies/Drivers/HAL/Inc&quot;"/>
 									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Device/ST/STM32L5xx/Include"/>
 									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Include"/>
+									<listOptionValue builtIn="false" value="../../../Dependencies/FreeRTOS/Source/include"/>
+									<listOptionValue builtIn="false" value="../../../Dependencies/FreeRTOS/Source/CMSIS_RTOS_V2"/>
+									<listOptionValue builtIn="false" value="../../../Dependencies/FreeRTOS/Source/portable/GCC/ARM_CM33/non_secure"/>
+									<listOptionValue builtIn="false" value="../../../Dependencies/FreeRTOS/Source/portable/GCC/ARM_CM33/secure"/>
+									<listOptionValue builtIn="false" value="../../../../Dependencies/Drivers/CMSIS/Device/ST/STM32L5xx/Include"/>
+									<listOptionValue builtIn="false" value="../../../Dependencies/Drivers/BSP"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.1108432561" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
 							</tool>

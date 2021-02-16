@@ -223,11 +223,14 @@ static void MX_GPIO_Init(void)
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
 
-  /*Configure GPIO pin : PC13 */
-  GPIO_InitStruct.Pin = GPIO_PIN_13;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  /*Configure the EXTI line attribute */
+  HAL_EXTI_ConfigLineAttributes(EXTI_LINE_13, EXTI_LINE_PRIV);
+
+  /*Configure GPIO pin : User_Interrupt_Pin */
+  GPIO_InitStruct.Pin = User_Interrupt_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+  HAL_GPIO_Init(User_Interrupt_GPIO_Port, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI13_IRQn, 5, 0);

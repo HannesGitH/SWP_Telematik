@@ -41,7 +41,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-int attack = 0;
+bool attack = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -109,7 +109,7 @@ void EXTI13_IRQHandler(void)
   /* USER CODE BEGIN EXTI13_IRQn 0 */
   if(attack == 0){
 	  createAttack();
-	  ++attack;
+	  attack=1;
   }
   /* USER CODE END EXTI13_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_13);

@@ -280,7 +280,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOC_CLK_ENABLE();
 
   /*IO attributes management functions */
-  HAL_GPIO_ConfigPinAttributes(GPIOC, GPIO_PIN_13, GPIO_PIN_NSEC);
+  HAL_GPIO_ConfigPinAttributes(User_Interrupt_GPIO_Port, User_Interrupt_Pin, GPIO_PIN_NSEC);
 
 }
 

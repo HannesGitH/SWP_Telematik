@@ -16,9 +16,15 @@ dem Projekt wird demnächst alles nötige an Information hinzugefügt, bis dahin
 - befindet sich [hier](https://github.com/HannesGitH/SWP_Telematik/wiki/getting_started)
 
 ### STM32CubeIDE and STM32CubeProgrammer
+#### STM32CubeIDE
+You need the STM32CubeIDE to build and flash the program. [Here]() you can learn more on how to use the STM32CubeIDE.
 
-### TF-M and FreeRTOS
-#### TF-M
+#### STM32CubeProgrammer
+The STM32Cubeprogrammer is used to configure the board. Before the project can be flashed one might need to set Option Bytes or change th size of pages. For more information click [here]().
+
+### Trustzone and FreeRTOS
+#### Trustzone
+Our project focuses on the usage of Trustzone. In the according [wikipage]() is a description on how truszone works and how to configure the board to use trustzone.
 
 #### FreeRTOS
 The main Feature of FreeRTOS is the support to use multiple Tasks. FreeRTOS can be easily integrated in a STM32-Project within the STM32CubeIDE by selecting the associated .ioc File an enabling of CMSIS (Cortex Microcontroller Software Interface Standard). A detailed description on how to enable this option and how the STM32CubeIDE facilitates the developement of applications based on FreeRTOS will be given in Chapter 3. We will focus in this subsection on some Backgrounds that are important to understand for the project. 

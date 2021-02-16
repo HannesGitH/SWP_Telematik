@@ -32,16 +32,16 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
-		<linkedResources>
-		<link>
-			<name>Doc/readme.txt</name>
-			<type>1</type>
-			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/readme.txt</locationURI>
-		</link>
+	<linkedResources>
 		<link>
 			<name>Application/User/LEDController.cpp</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Secure/Src/LEDController.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/app_freertos.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/NonSecure/Src/app_freertos.c</locationURI>
 		</link>
 		<link>
 			<name>Application/User/main.c</name>
@@ -184,24 +184,79 @@
 			<locationURI>$%7BPARENT-3-PROJECT_LOC%7D/Dependencies/Drivers/HAL/Src/stm32l5xx_hal_uart_ex.c</locationURI>
 		</link>
 		<link>
+			<name>Middlewares/FreeRTOS/cmsis_os2.c</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Dependencies/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c</locationURI>
+		</link>
+		<link>
+			<name>Middlewares/FreeRTOS/croutine.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/croutine.c</locationURI>
+		</link>
+		<link>
+			<name>Middlewares/FreeRTOS/event_groups.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/event_groups.c</locationURI>
+		</link>
+		<link>
+			<name>Middlewares/FreeRTOS/heap_4.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/portable/MemMang/heap_4.c</locationURI>
+		</link>
+		<link>
+			<name>Middlewares/FreeRTOS/list.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/list.c</locationURI>
+		</link>
+		<link>
+			<name>Middlewares/FreeRTOS/port.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/portable/GCC/ARM_CM33/non_secure/port.c</locationURI>
+		</link>
+		<link>
+			<name>Middlewares/FreeRTOS/portasm.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/portable/GCC/ARM_CM33/non_secure/portasm.c</locationURI>
+		</link>
+		<link>
+			<name>Middlewares/FreeRTOS/queue.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/queue.c</locationURI>
+		</link>
+		<link>
 			<name>Middlewares/FreeRTOS/secure_context.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-3-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/portable/GCC/ARM_CM33/secure/secure_context.c</locationURI>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/portable/GCC/ARM_CM33/secure/secure_context.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/FreeRTOS/secure_context_port.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-3-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/portable/GCC/ARM_CM33/secure/secure_context_port.c</locationURI>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/portable/GCC/ARM_CM33/secure/secure_context_port.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/FreeRTOS/secure_heap.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-3-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/portable/GCC/ARM_CM33/secure/secure_heap.c</locationURI>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/portable/GCC/ARM_CM33/secure/secure_heap.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/FreeRTOS/secure_init.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-3-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/portable/GCC/ARM_CM33/secure/secure_init.c</locationURI>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/portable/GCC/ARM_CM33/secure/secure_init.c</locationURI>
+		</link>
+		<link>
+			<name>Middlewares/FreeRTOS/stream_buffer.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/stream_buffer.c</locationURI>
+		</link>
+		<link>
+			<name>Middlewares/FreeRTOS/tasks.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/tasks.c</locationURI>
+		</link>
+		<link>
+			<name>Middlewares/FreeRTOS/timers.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/timers.c</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

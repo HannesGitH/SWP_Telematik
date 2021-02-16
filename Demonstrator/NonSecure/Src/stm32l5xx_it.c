@@ -41,7 +41,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-bool attack = 0;
+_Bool attack = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/

@@ -41,7 +41,7 @@
 		<link>
 			<name>Application/User/app_freertos.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/NonSecure/Src/app_freertos.c</locationURI>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/NonSecure/Src/app_freertos.c</locationURI>
 		</link>
 		<link>
 			<name>Application/User/main.c</name>
@@ -72,6 +72,21 @@
 			<name>Drivers/BSP/stm32l5xx_nucleo.c</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/Drivers/BSP/stm32l5xx_nucleo.c</locationURI>
+		</link>
+		<link>
+			<name>Drivers/HAL/stm32l5xx_hal_adc.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/Drivers/HAL/Src/stm32l5xx_hal_adc.c</locationURI>
+		</link>
+		<link>
+			<name>Drivers/HAL/stm32l5xx_hal_rtc.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/Drivers/HAL/Src/stm32l5xx_hal_rtc.c</locationURI>
+		</link>
+		<link>
+			<name>Drivers/HAL/stm32l5xx_hal_pcd.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/Drivers/HAL/Src/stm32l5xx_hal_pcd.c</locationURI>
 		</link>
 		<link>
 			<name>Drivers/HAL/stm32l5xx_hal.c</name>

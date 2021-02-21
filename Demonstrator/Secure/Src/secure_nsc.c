@@ -80,7 +80,11 @@ secureportNON_SECURE_CALLABLE void SECURE_LEDS_setGreen(uint8_t brightness){
     //BSP_LED_Toggle(LED2);
 }
 
-secureportNON_SECURE_CALLABLE void SECURE_LEDS_setRed(uint8_t brightness){
+secureportNON_SECURE_CALLABLE void (*get__SECURE_LEDS_setRed__func(void))(uint8_t) {
+  return SECURE_LEDS_setRed;
+}
+
+void SECURE_LEDS_setRed(uint8_t brightness){
 	//BSP_LED_Init(LED2);
 	HAL_ResumeTick();
     struct RGB currentColor = LEDController_getColor();

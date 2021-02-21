@@ -41,6 +41,7 @@ typedef enum
 void SECURE_RegisterCallback(SECURE_CallbackIDTypeDef CallbackId, void *func);
 void SECURE_LEDToggle(Led_TypeDef LED);
 
+void (*get__SECURE_LEDS_setRed__func(void))(uint8_t);
 void SECURE_LEDS_setGreen(uint8_t brightness);
 void SECURE_LEDS_setRed(uint8_t brightness);
 void SECURE_LEDS_setBlue(uint8_t brightness);

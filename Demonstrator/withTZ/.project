@@ -18,7 +18,7 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>Demonstrator.ioc</name>
+			<name>withTZ.ioc</name>
 			<type>1</type>
 			<locationURI>PROJECT_LOC/Demonstrator.ioc</locationURI>
 		</link>

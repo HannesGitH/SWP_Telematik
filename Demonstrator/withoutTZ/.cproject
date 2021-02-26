@@ -48,7 +48,7 @@
 									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="../../../Dependencies/FreeRTOS/Source/include"/>
 									<listOptionValue builtIn="false" value="../../../Dependencies/FreeRTOS/Source/CMSIS_RTOS_V2"/>
-									<listOptionValue builtIn="false" value="../../../Dependencies/FreeRTOS/Source/portable/GCC/ARM_CM33/non_secure"/>
+									<listOptionValue builtIn="false" value="../../../Dependencies/FreeRTOS/Source/portable/GCC/ARM_CM33_NTZ/non_secure"/>
 									<listOptionValue builtIn="false" value="../../../Dependencies/Drivers/BSP"/>
 									<listOptionValue builtIn="false" value="../Drivers/STM32L5xx_HAL_Driver/Inc"/>
 									<listOptionValue builtIn="false" value="../Drivers/STM32L5xx_HAL_Driver/Inc/Legacy"/>
@@ -80,7 +80,7 @@
 									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="../../../Dependencies/FreeRTOS/Source/include"/>
 									<listOptionValue builtIn="false" value="../../../Dependencies/FreeRTOS/Source/CMSIS_RTOS_V2"/>
-									<listOptionValue builtIn="false" value="../../../Dependencies/FreeRTOS/Source/portable/GCC/ARM_CM33/non_secure"/>
+									<listOptionValue builtIn="false" value="../../../Dependencies/FreeRTOS/Source/portable/GCC/ARM_CM33_NTZ/non_secure"/>
 									<listOptionValue builtIn="false" value="../../../Dependencies/Drivers/BSP"/>
 									<listOptionValue builtIn="false" value="../Drivers/STM32L5xx_HAL_Driver/Inc"/>
 									<listOptionValue builtIn="false" value="../Drivers/STM32L5xx_HAL_Driver/Inc/Legacy"/>

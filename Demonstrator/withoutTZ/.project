@@ -126,17 +126,17 @@
 		<link>
 			<name>Middlewares/FreeRTOS/secure_context.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/portable/GCC/ARM_CM33_NTZ/secure/secure_context.c</locationURI>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/portable/GCC/ARM_CM33/secure/secure_context.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/FreeRTOS/secure_context_port.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/portable/GCC/ARM_CM33_NTZ/secure/secure_context_port.c</locationURI>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/portable/GCC/ARM_CM33/secure/secure_context_port.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/FreeRTOS/secure_init.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/portable/GCC/ARM_CM33_NTZ/secure/secure_init.c</locationURI>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Dependencies/FreeRTOS/Source/portable/GCC/ARM_CM33/secure/secure_init.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/FreeRTOS/stream_buffer.c</name>

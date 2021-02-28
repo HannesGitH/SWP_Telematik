@@ -59,10 +59,13 @@ bool SecureLEDController::setRGB(
 }
 
 void SecureLEDController::configureP9813AsSecure(P9813DATA p9813data){
+    #ifdef HAL_GPIO_ConfigPinAttributes
   	HAL_GPIO_ConfigPinAttributes(p9813data.GPIOx, ((p9813data.GPIO_Pin_data) & (p9813data.GPIO_Pin_clock)), GPIO_PIN_SEC);
 	return;
+    #endif
 }
 void SecureLEDController::configureNormalLEDsAsSecure(LEDPINDATA pindata){
+    #ifdef HAL_GPIO_ConfigPinAttributes
 	//config pins as secure
   	HAL_GPIO_ConfigPinAttributes(pindata.GPIOx_R,  pindata.GPIO_Pin_Red, GPIO_PIN_SEC);
 	HAL_GPIO_ConfigPinAttributes(pindata.GPIOx_G,  pindata.GPIO_Pin_Green, GPIO_PIN_SEC);
@@ -81,6 +84,7 @@ void SecureLEDController::configureNormalLEDsAsSecure(LEDPINDATA pindata){
   	//init red pin
   	  	GPIO_Init.Pin   = pindata.GPIO_Pin_Blue;
   		HAL_GPIO_Init(pindata.GPIOx_B, &GPIO_Init);
+    #endif
 	
 	return;
 }

@@ -1,5 +1,5 @@
 /* --------------------------------------------------------------------------
- * Portions Copyright © 2019 STMicroelectronics International N.V. All rights reserved.
+ * Portions Copyright ï¿½ 2019 STMicroelectronics International N.V. All rights reserved.
  * Copyright (c) 2013-2019 Arm Limited. All rights reserved.
  *
  * SPDX-License-Identifier: Apache-2.0
@@ -412,7 +412,8 @@ osThreadId_t osThreadNew (osThreadFunc_t func, void *argument, const osThreadAtt
 
   hTask = NULL;
 
-  if (!IS_IRQ() && (func != NULL)) {
+  //if (!IS_IRQ() && (func != NULL)) {
+  if ((func != NULL)) {
     stack = configMINIMAL_STACK_SIZE;
     prio  = (UBaseType_t)osPriorityNormal;
 

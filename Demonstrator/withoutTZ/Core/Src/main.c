@@ -24,6 +24,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "nsc_wrapper.h"
+#include "thread1.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -56,6 +57,13 @@ const osThreadAttr_t defaultTask_attributes = {
   .priority = (osPriority_t) osPriorityNormal,
   .stack_size = 512
 };
+/* Definitions for thread1 */
+osThreadId_t thread1Handle;
+const osThreadAttr_t thread1_attributes = {
+  .name = "thread1",
+  .priority = (osPriority_t) osPriorityLow,
+  .stack_size = 512
+};
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -69,6 +77,7 @@ static void MX_RTC_Init(void);
 static void MX_UCPD1_Init(void);
 static void MX_USB_PCD_Init(void);
 void StartDefaultTask(void *argument);
+void StartThread1(void *argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -113,7 +122,7 @@ int main(void)
   MX_UCPD1_Init();
   MX_USB_PCD_Init();
   /* USER CODE BEGIN 2 */
-
+  initLEDController_default();
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -138,6 +147,9 @@ int main(void)
   /* Create the thread(s) */
   /* creation of defaultTask */
   defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
+
+  /* creation of thread1 */
+  thread1Handle = osThreadNew(StartThread1, NULL, &thread1_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -515,7 +527,23 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+void StartAttackTask(void* argument){
+	while(1){
+		BSP_LED_Toggle(LED3);
+		osDelay(1000);
+	}
+}
 
+void create_attack(void){
+	osThreadId_t attackTaskHandle;
+	const osThreadAttr_t attackTask_attributes = {
+	  .name = "attackTask",
+	  .priority = (osPriority_t) osPriorityNormal,
+	  .stack_size = 512
+	};
+
+	attackTaskHandle = osThreadNew(StartAttackTask, NULL, &attackTask_attributes);
+}
 /* USER CODE END 4 */
 
 /* USER CODE BEGIN Header_StartDefaultTask */
@@ -537,6 +565,24 @@ void StartDefaultTask(void *argument)
 	    osDelay(1000);
   }
   /* USER CODE END 5 */
+}
+
+/* USER CODE BEGIN Header_StartThread1 */
+/**
+* @brief Function implementing the thread1 thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartThread1 */
+void StartThread1(void *argument)
+{
+  /* USER CODE BEGIN StartThread1 */
+  /* Infinite loop */
+  for(;;)
+  {
+	  runThread1();
+  }
+  /* USER CODE END StartThread1 */
 }
 
  /**

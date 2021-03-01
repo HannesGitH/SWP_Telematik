@@ -1,8 +1,7 @@
 /**
   ******************************************************************************
-  * @file    Secure_nsclib/secure_nsc.h
-  * @author  MCD Application Team
-  * @brief   Header for secure non-secure callable APIs list
+  * @file    stm32_assert.h
+  * @brief   STM32 assert file.
   ******************************************************************************
   * @attention
   *
@@ -16,36 +15,39 @@
   *
   ******************************************************************************
   */
-/* USER CODE BEGIN Non_Secure_CallLib_h */
-/* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef SECURE_NSC_H
-#define SECURE_NSC_H
 
-/* Includes ------------------------------------------------------------------*/
-#include <stdint.h>
-#include "stm32l5xx_nucleo.h"
+/* Define to prevent recursive inclusion -------------------------------------*/
+#ifndef __STM32_ASSERT_H
+#define __STM32_ASSERT_H
+
+#ifdef __cplusplus
+ extern "C" {
+#endif
 
 /* Exported types ------------------------------------------------------------*/
-/**
-  * @brief  non-secure callback ID enumeration definition
-  */
-typedef enum
-{
-  SECURE_FAULT_CB_ID     = 0x00U, /*!< System secure fault callback ID */
-  GTZC_ERROR_CB_ID       = 0x01U  /*!< GTZC secure error callback ID */
-} SECURE_CallbackIDTypeDef;
-
 /* Exported constants --------------------------------------------------------*/
+/* Includes ------------------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
+#ifdef  USE_FULL_ASSERT
+/**
+  * @brief  The assert_param macro is used for function's parameters check.
+  * @param  expr: If expr is false, it calls assert_failed function
+  *         which reports the name of the source file and the source
+  *         line number of the call that failed.
+  *         If expr is true, it returns no value.
+  * @retval None
+  */
+ #define assert_param(expr) ((expr) ? (void)0U : assert_failed((uint8_t *)__FILE__, __LINE__))
 /* Exported functions ------------------------------------------------------- */
-void SECURE_RegisterCallback(SECURE_CallbackIDTypeDef CallbackId, void *func);
-void SECURE_LEDToggle(Led_TypeDef LED);
+  void assert_failed(uint8_t* file, uint32_t line);
+#else
+  #define assert_param(expr) ((void)0U)
+#endif /* USE_FULL_ASSERT */
 
-void (*get__SECURE_LEDS_setRed__func(void))(uint8_t);
-void SECURE_LEDS_setGreen(uint8_t brightness);
-void SECURE_LEDS_setRed(uint8_t brightness);
-void SECURE_LEDS_setBlue(uint8_t brightness);
+#ifdef __cplusplus
+}
+#endif
 
-#endif /* SECURE_NSC_H */
-/* USER CODE END Non_Secure_CallLib_h */
+#endif /* __STM32_ASSERT_H */
+
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

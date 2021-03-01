@@ -35,8 +35,9 @@ class SecureLEDController{
       P9813Controller p9813controller;
 
       void writeColor();
-      void configureP9813AsSecure(P9813DATA p9813data);
-      void configureNormalLEDsAsSecure(LEDPINDATA pindata);
+    /* We don't need to use these functions, if we don't use TrustZone */
+    void configureP9813AsSecure(P9813DATA p9813data);
+    void configureNormalLEDsAsSecure(LEDPINDATA pindata);
 
   public:
     /**

@@ -4,7 +4,6 @@
 extern "C"{
   #include "stm32l5xx_nucleo.h"
   #include "CtoCpp_callable.h"
-  #include "nonsecure_macros.h"
 }
 #include "p9813controller.hpp"
 
@@ -36,11 +35,9 @@ class SecureLEDController{
       P9813Controller p9813controller;
 
       void writeColor();
-	#ifndef NONSECURE
     /* We don't need to use these functions, if we don't use TrustZone */
     void configureP9813AsSecure(P9813DATA p9813data);
     void configureNormalLEDsAsSecure(LEDPINDATA pindata);
-	#endif
 
   public:
     /**

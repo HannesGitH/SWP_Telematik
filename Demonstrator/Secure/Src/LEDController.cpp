@@ -30,19 +30,27 @@ void SecureLEDController::writeColor(){
 }
 
 SecureLEDController::SecureLEDController(P9813DATA p9813data){
+	#ifndef NONSECURE
 	configureP9813AsSecure(p9813data);
+	#endif
 	p9813controller=P9813Controller(p9813data.GPIOx,p9813data.GPIO_Pin_data,p9813data.GPIO_Pin_clock);
     type=p9813;
 }
 SecureLEDController::SecureLEDController(LEDPINDATA led_pins){
+	#ifndef NONSECURE
 	configureNormalLEDsAsSecure(led_pins);
+	#endif
     type=onBoard;
 }
 SecureLEDController::SecureLEDController(P9813DATA p9813data,LEDPINDATA led_pins){
+	#ifndef NONSECURE
 	configureP9813AsSecure(p9813data);
+	#endif
 	p9813controller=P9813Controller(p9813data.GPIOx,p9813data.GPIO_Pin_data,p9813data.GPIO_Pin_clock);
+	#ifndef NONSECURE
 	configureNormalLEDsAsSecure(led_pins);
-    type=both;
+	#endif
+	type=both;
 }
 bool SecureLEDController::setRGB(RGB rgb){
 	return setRGB(rgb.r,rgb.g,rgb.b);
@@ -57,7 +65,8 @@ bool SecureLEDController::setRGB(
 	writeColor();
 	return SUCCESS;
 }
-
+#ifndef NONSECURE
+/* We don't need to use these functions, if we don't use TrustZone */
 void SecureLEDController::configureP9813AsSecure(P9813DATA p9813data){
   	HAL_GPIO_ConfigPinAttributes(p9813data.GPIOx, ((p9813data.GPIO_Pin_data) & (p9813data.GPIO_Pin_clock)), GPIO_PIN_SEC);
 	return;
@@ -84,7 +93,7 @@ void SecureLEDController::configureNormalLEDsAsSecure(LEDPINDATA pindata){
 	
 	return;
 }
-
+#endif
 
 
 

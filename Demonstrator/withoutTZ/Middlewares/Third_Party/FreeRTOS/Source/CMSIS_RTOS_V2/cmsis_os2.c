@@ -412,8 +412,9 @@ osThreadId_t osThreadNew (osThreadFunc_t func, void *argument, const osThreadAtt
 
   hTask = NULL;
 
+/// regenerating freeRTOS resets the following 2 lines, resulting in the inability to create threads inside an IRQ. But the attack wants to do exactly this.
   //if (!IS_IRQ() && (func != NULL)) {
-  if ((func != NULL)) {
+  if ((func != NULL)) {    
     stack = configMINIMAL_STACK_SIZE;
     prio  = (UBaseType_t)osPriorityNormal;
 

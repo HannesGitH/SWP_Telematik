@@ -23,7 +23,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "nsc_wrapper.h"
+#include "secure_nsc.h"
 #include "thread1.h"
 /* USER CODE END Includes */
 

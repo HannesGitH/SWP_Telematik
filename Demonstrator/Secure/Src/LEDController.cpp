@@ -1,5 +1,6 @@
 #include "LEDController.hpp"
 #include "CtoCpp_callable.h"
+#include "main.h"
 
 
 void SecureLEDController::writeColor(){
@@ -60,17 +61,18 @@ bool SecureLEDController::setRGB(
 /* We don't need to use these functions, if we don't use TrustZone */
 void SecureLEDController::configureP9813AsSecure(P9813DATA p9813data){
 
-	#ifdef HAL_GPIO_ConfigPinAttributes
+	#ifdef SECURE
 		HAL_GPIO_ConfigPinAttributes(p9813data.GPIOx, ((p9813data.GPIO_Pin_data) & (p9813data.GPIO_Pin_clock)), GPIO_PIN_SEC);
 	#endif
 	return;
 }
 void SecureLEDController::configureNormalLEDsAsSecure(LEDPINDATA pindata){
-	#ifdef HAL_GPIO_ConfigPinAttributes
+	#ifdef SECURE
 		//config pins as secure
 		HAL_GPIO_ConfigPinAttributes(pindata.GPIOx_R,  pindata.GPIO_Pin_Red, GPIO_PIN_SEC);
 		HAL_GPIO_ConfigPinAttributes(pindata.GPIOx_G,  pindata.GPIO_Pin_Green, GPIO_PIN_SEC);
 		HAL_GPIO_ConfigPinAttributes(pindata.GPIOx_B,  pindata.GPIO_Pin_Blue, GPIO_PIN_SEC);
+	#endif
 		//init pins
 		GPIO_InitTypeDef GPIO_Init;
 		GPIO_Init.Mode  = GPIO_MODE_OUTPUT_PP;
@@ -86,7 +88,6 @@ void SecureLEDController::configureNormalLEDsAsSecure(LEDPINDATA pindata){
 			GPIO_Init.Pin   = pindata.GPIO_Pin_Blue;
 			HAL_GPIO_Init(pindata.GPIOx_B, &GPIO_Init);
 	
-	#endif
 	return;
 }
 

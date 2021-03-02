@@ -9,6 +9,11 @@ dem Projekt wird demnächst alles nötige an Information hinzugefügt, bis dahin
 - NUCLEO Board L552ZE-Q
 - STM32CubeIDE and STM32CubeProgrammer
 - ST-Link Driver
+
+### Repository-Guide
+
+If you are confused by the structure of this git, yo may wan to check out [this site](https://github.com/HannesGitH/SWP_Telematik/wiki/Git-Guide)
+
 #### Documents Links etc.
 - [freeRTOS on M33](https://www.freertos.org/2020/04/using-freertos-on-armv8-m-microcontrollers.html)
 

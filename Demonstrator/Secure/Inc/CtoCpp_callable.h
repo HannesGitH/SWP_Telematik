@@ -1,6 +1,8 @@
 #ifndef C_TO_CPP_H
 #define C_TO_CPP_H
 
+#include "stm32l5xx_nucleo.h"
+
 void initLEDController(
     GPIO_TypeDef*   GPIOx, 
     uint16_t        GPIO_Pin_data,

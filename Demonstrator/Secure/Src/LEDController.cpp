@@ -1,5 +1,6 @@
 #include "LEDController.hpp"
 #include "CtoCpp_callable.h"
+#include "main.h"
 
 
 void SecureLEDController::writeColor(){
@@ -42,7 +43,7 @@ SecureLEDController::SecureLEDController(P9813DATA p9813data,LEDPINDATA led_pins
 	configureP9813AsSecure(p9813data);
 	p9813controller=P9813Controller(p9813data.GPIOx,p9813data.GPIO_Pin_data,p9813data.GPIO_Pin_clock);
 	configureNormalLEDsAsSecure(led_pins);
-    type=both;
+	type=both;
 }
 bool SecureLEDController::setRGB(RGB rgb){
 	return setRGB(rgb.r,rgb.g,rgb.b);
@@ -57,34 +58,38 @@ bool SecureLEDController::setRGB(
 	writeColor();
 	return SUCCESS;
 }
-
+/* We don't need to use these functions, if we don't use TrustZone */
 void SecureLEDController::configureP9813AsSecure(P9813DATA p9813data){
-  	HAL_GPIO_ConfigPinAttributes(p9813data.GPIOx, ((p9813data.GPIO_Pin_data) & (p9813data.GPIO_Pin_clock)), GPIO_PIN_SEC);
+
+	#ifdef SECURE
+		HAL_GPIO_ConfigPinAttributes(p9813data.GPIOx, ((p9813data.GPIO_Pin_data) & (p9813data.GPIO_Pin_clock)), GPIO_PIN_SEC);
+	#endif
 	return;
 }
 void SecureLEDController::configureNormalLEDsAsSecure(LEDPINDATA pindata){
-	//config pins as secure
-  	HAL_GPIO_ConfigPinAttributes(pindata.GPIOx_R,  pindata.GPIO_Pin_Red, GPIO_PIN_SEC);
-	HAL_GPIO_ConfigPinAttributes(pindata.GPIOx_G,  pindata.GPIO_Pin_Green, GPIO_PIN_SEC);
-	HAL_GPIO_ConfigPinAttributes(pindata.GPIOx_B,  pindata.GPIO_Pin_Blue, GPIO_PIN_SEC);
-	//init pins
-	GPIO_InitTypeDef GPIO_Init;
-  	GPIO_Init.Mode  = GPIO_MODE_OUTPUT_PP;
-	GPIO_Init.Pull  = GPIO_PULLUP;
-	GPIO_Init.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-  	//init red pin
-  	  	GPIO_Init.Pin   = pindata.GPIO_Pin_Red;
-  		HAL_GPIO_Init(pindata.GPIOx_R, &GPIO_Init);
-  	//init red pin
-  	  	GPIO_Init.Pin   = pindata.GPIO_Pin_Green;
-  		HAL_GPIO_Init(pindata.GPIOx_G, &GPIO_Init);
-  	//init red pin
-  	  	GPIO_Init.Pin   = pindata.GPIO_Pin_Blue;
-  		HAL_GPIO_Init(pindata.GPIOx_B, &GPIO_Init);
+	#ifdef SECURE
+		//config pins as secure
+		HAL_GPIO_ConfigPinAttributes(pindata.GPIOx_R,  pindata.GPIO_Pin_Red, GPIO_PIN_SEC);
+		HAL_GPIO_ConfigPinAttributes(pindata.GPIOx_G,  pindata.GPIO_Pin_Green, GPIO_PIN_SEC);
+		HAL_GPIO_ConfigPinAttributes(pindata.GPIOx_B,  pindata.GPIO_Pin_Blue, GPIO_PIN_SEC);
+	#endif
+		//init pins
+		GPIO_InitTypeDef GPIO_Init;
+		GPIO_Init.Mode  = GPIO_MODE_OUTPUT_PP;
+		GPIO_Init.Pull  = GPIO_PULLUP;
+		GPIO_Init.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+		//init red pin
+			GPIO_Init.Pin   = pindata.GPIO_Pin_Red;
+			HAL_GPIO_Init(pindata.GPIOx_R, &GPIO_Init);
+		//init red pin
+			GPIO_Init.Pin   = pindata.GPIO_Pin_Green;
+			HAL_GPIO_Init(pindata.GPIOx_G, &GPIO_Init);
+		//init red pin
+			GPIO_Init.Pin   = pindata.GPIO_Pin_Blue;
+			HAL_GPIO_Init(pindata.GPIOx_B, &GPIO_Init);
 	
 	return;
 }
-
 
 
 
